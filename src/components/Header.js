@@ -1,23 +1,23 @@
 import React from 'react'
-import { UilMoon } from '@iconscout/react-icons'
+import * as Unicons from '@iconscout/react-unicons'
 
 const Header = () => {
   return (
     <>
-        <header>
-          <div>
+        <header className='header__container'>
+          <div className='header__title'>
             <h1>Tomas Rios Vargas</h1>
             <h2>Full Stack Developer</h2>
           </div>
-          <nav>
+          <nav className='header__navbar'>
             <ul>
               <li>Home</li>
               <li>About</li>
               <li>Portfolio</li>
             </ul>
           </nav>
-          <div>
-            <UilMoon />
+          <div className='header__icons'>
+            <Unicons.UilMoon />
           </div>
         </header>
     </>
