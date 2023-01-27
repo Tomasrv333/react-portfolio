@@ -10,6 +10,11 @@ const Home = () => {
                     <p>lorem</p>
                 </div>
             </div>
+            <div className="repo__container">
+                <div className="repo__block">
+
+                </div>
+            </div>
         </>
     )
 }
