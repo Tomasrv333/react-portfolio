@@ -1,0 +1,33 @@
+.header__container {
+    height: 32px;
+    position: fixed;
+    background-color: white;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 80px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.header__logo {
+    color: var(--tertiary-color);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.header__navbar {
+    width: 33%;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+}
+
+.header__icons {
+    color: black;
+}

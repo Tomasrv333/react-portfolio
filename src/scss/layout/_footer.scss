@@ -1,0 +1,9 @@
+@import '../abstracts/variables';
+
+.footer__container {
+    height: 256px;
+    padding: 16px 80px;
+    background-color: var(--primary-color);
+    position: relative;
+    bottom: 0;
+}

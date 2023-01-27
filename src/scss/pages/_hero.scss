@@ -1,0 +1,8 @@
+.hero__container {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 6rem;
+}

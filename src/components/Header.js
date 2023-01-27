@@ -6,13 +6,14 @@ const Header = () => {
     <>
         <header className='header__container'>
           <div className='header__logo'>
-            <a>TRV</a>
+            <h3>Portafolio</h3>
           </div>
           <nav className='header__navbar'>
             <ul>
               <li>Home</li>
-              <li>About</li>
-              <li>Portfolio</li>
+              <li>Acerca de mi</li>
+              <li>Proyectos</li>
+              <li>Contacto</li>
             </ul>
           </nav>
           <div className='header__icons'>
