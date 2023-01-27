@@ -6,8 +6,8 @@ const Header = () => {
     <>
         <header className='header__container'>
           <div className='header__title'>
-            <h1>Tomas Rios Vargas</h1>
-            <h2>Full Stack Developer</h2>
+            <h2>Tomas Rios Vargas</h2>
+            <h1>Full Stack Developer</h1>
           </div>
           <nav className='header__navbar'>
             <ul>

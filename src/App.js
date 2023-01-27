@@ -2,6 +2,8 @@ import React from 'react'
 import Header from './components/Header';
 import { themeContext } from './context/context'
 import { useContext } from 'react';
+import Footer from './components/Footer';
+import Home from './pages/Home';
 
 const App = () => {
     const theme = useContext(themeContext);
@@ -11,6 +13,7 @@ const App = () => {
         <>
             <Header />
             <div>App</div>
+            <Footer />
         </>
     )
 }
