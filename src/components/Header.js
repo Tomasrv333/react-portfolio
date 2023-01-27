@@ -5,9 +5,8 @@ const Header = () => {
   return (
     <>
         <header className='header__container'>
-          <div className='header__title'>
-            <h2>Tomas Rios Vargas</h2>
-            <h1>Full Stack Developer</h1>
+          <div className='header__logo'>
+            <a>TRV</a>
           </div>
           <nav className='header__navbar'>
             <ul>
