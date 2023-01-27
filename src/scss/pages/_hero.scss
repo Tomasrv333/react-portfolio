@@ -1,8 +1,24 @@
 .hero__container {
+    padding: 32px 0;
     height: 100vh;
     display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 1rem 6rem;
+    grid-template-columns: 1fr 1.5fr;
+
+    .hero__info {
+        padding: 3rem 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            color: var(--greenLight-color);
+        }
+        h3 {
+            color: var(--violetLight-color);
+            margin-bottom: 1rem;
+        }
+        p {
+            color: var(--black-color);
+        }
+    }
 }

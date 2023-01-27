@@ -1,9 +1,44 @@
 @import '../abstracts/variables';
 
 .footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 256px;
     padding: 16px 80px;
-    background-color: var(--primary-color);
+    background-color: var(--violetLight-color);
     position: relative;
     bottom: 0;
+
+    .footer__info {
+        width: 40%;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        h3 {
+            color: var(--white-color);
+        }
+    }
+
+    .contactIcons__content {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        padding: 1rem 0;
+        border-top: 1px solid var(--greenLight-color);
+
+        .icon__block {
+            cursor: pointer;
+            color: var(--violetLight-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            padding: 0.2rem;
+            border-radius: 50%;
+            background-color: var(--white-color);
+        }
+    }
 }
