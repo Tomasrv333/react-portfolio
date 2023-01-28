@@ -30,6 +30,16 @@
         justify-content: space-between;
         list-style: none;
     }
+
+    .navbar__item {
+        transition: 1s;
+        cursor: pointer;
+    }
+
+    .navbar__item--active {
+        transition: 0s;
+        border-bottom: 3px solid var(--greenLight-color);
+    }
 }
 
 .header__icons {
