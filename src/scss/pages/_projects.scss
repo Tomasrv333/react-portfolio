@@ -10,39 +10,58 @@
 }
 
 .projects__content {
-    height: 50vh;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: 2rem;
-
-    .projects__info-side {
-        height: fit-content;
-        padding: 2rem;
-        border-bottom: 2px solid var(--violetLight-color);
-        border-left: 2px solid var(--violetLight-color);
-    
-        .info-side__img {
-            width: 100%;
-            height: 24rem;
-            background-image: url('https://cdn.pixabay.com/photo/2019/10/09/07/28/development-4536630_960_720.png');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        h2 {
-            margin-bottom: 0.6rem;
-            color: var(--violetLight-color);
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-    }
+    align-items: end;
 
     .projects__template-side {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
         gap: 2rem;
     }
+
+    .projects__info {
+        width: 100%;
+    
+        .info__img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20rem;
+            height: 20rem;
+            background-image: url('https://i.ibb.co/pdqV36q/png-transparent-red-rocket-ship-illustration-rocket-launch-spacecraft-icon-rocket-image-file-formats.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .info__text {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: fit-content;
+            padding: 2rem;
+            border-radius: 0.4rem;
+            border: 1px dashed var(--grey-color);
+        }
+
+        h3 {
+            margin-bottom: 1rem;
+            color: var(--violetLight-color);
+        }
+    }
+}
+
+.figure {
+    width: 14rem;
+    height: 14rem;
+    z-index: -1;
+    top: 210%;
+    right: 11%;
+    rotate: 45deg;
+    background-color: var(--violetLight-color);
+    border-radius: 0.6rem;
+
 }

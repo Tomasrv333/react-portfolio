@@ -6,14 +6,6 @@ const Projects = () => {
         <section id="projects" className="projects__container">
             <h1 className="projects__title">Projects</h1>
             <div className="projects__content">
-                <div className="projects__info-side">
-                    <div className='info-side__img'>
-
-                    </div>
-                    <h2>Hola!</h2>
-                    <p>Explora los diferentes proyectos que he realizado haciendo uso de tecnologias pertenecientes al MERN Stack</p>
-                    <button>Github<Unicons.UilGithub /></button>
-                </div>
                 <div className='projects__template-side'>
                     <CardProject />
                     <CardProject />
@@ -21,7 +13,17 @@ const Projects = () => {
                     <CardProject />
                     <CardProject />
                 </div>
-                
+                <div className='projects__info'>
+                    <div className='info__img'>
+
+                    </div>
+
+                    <div className='info__text'>
+                        <h3>Revisa mi perfil en Github!</h3>
+                        <button>Github<Unicons.UilGithub/></button>
+                    </div>
+                    
+                </div>
             </div>
         </section>
     )
