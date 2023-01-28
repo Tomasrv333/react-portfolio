@@ -12,6 +12,8 @@ const Header = () => {
     sections.forEach( section => {
       const sectionTop = section.offsetTop
       const sectionHeight = section.clientHeight
+      
+      
 
       if (scrollY >= sectionTop - sectionHeight / 3) {
         current = section.getAttribute('id')
@@ -41,7 +43,7 @@ const Header = () => {
                   to='home'
                   spy={true}
                   smooth={true}
-                  duration={1000}
+                  duration={800}
                   className='navbar__item'
                   activeClass = 'navbar__item--active'
                 >
@@ -53,7 +55,7 @@ const Header = () => {
                   to='about'
                   spy={true}
                   smooth={true}
-                  duration={1000}
+                  duration={800}
                   className='navbar__item'
                   activeClass = 'navbar__item--active'
                 >
@@ -65,7 +67,7 @@ const Header = () => {
                   to='projects'
                   spy={true}
                   smooth={true}
-                  duration={1000}
+                  duration={800}
                   className='navbar__item'
                   activeClass = 'navbar__item--active'
                 >
@@ -77,7 +79,7 @@ const Header = () => {
                   to='contact'
                   spy={true}
                   smooth={true}
-                  duration={1000}
+                  duration={800}
                   className='navbar__item'
                   activeClass = 'navbar__item--active'
                 >

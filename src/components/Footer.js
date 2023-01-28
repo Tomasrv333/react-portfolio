@@ -1,5 +1,6 @@
 import React from 'react'
 import * as Unicons from '@iconscout/react-unicons'
+import copyMessage from './copyMessage'
 
 const Footer = () => {
 
@@ -20,12 +21,17 @@ const Footer = () => {
             </div>
             <div className='contactIcons__content'>
                 <a className='icon__block' onClick={() => {
-                    navigator.clipboard.writeText(Links.phone)
+                    if (navigator.clipboard.writeText(Links.phone)) {
+                        alert('Numero de contacto copiado!')
+                    }
+                    
                 }}>
                     <Unicons.UilPhoneAlt />
                 </a>
                 <a className='icon__block' onClick={() => {
-                    navigator.clipboard.writeText(Links.gmail)
+                    if (navigator.clipboard.writeText(Links.gmail)) {
+                        alert('Correo copiado!')
+                    }
                 }}>
                     <Unicons.UilEnvelopeAlt />
                 </a>

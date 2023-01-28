@@ -2,7 +2,9 @@
 @use './about';
 @use './projects';
 @use './contact';
+@use '../layout/copyMessage';
 
 .main__container {
-    padding: 0 80px;
+    width: auto;
+    padding: 0 128px;
 }

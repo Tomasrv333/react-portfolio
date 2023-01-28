@@ -42,5 +42,10 @@
             border-radius: 50%;
             background-color: var(--white-color);
         }
+
+        .icon__block:hover {
+            color: var(--white-color);
+            background-color: var(--greenLight-color);
+        }
     }
 }
