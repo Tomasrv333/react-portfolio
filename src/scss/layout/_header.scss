@@ -13,9 +13,13 @@
 }
 
 .header__logo {
-    color: var(--greenLight-color);
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 700;
+    
+    a {
+        color: var(--greenLight-color);
+        text-decoration: none;
+    }
 }
 
 .header__navbar {
