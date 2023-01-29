@@ -9,3 +9,18 @@
         margin-bottom: 1rem;
     }
 }
+
+.about__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+
+    .about__info-content {
+
+    }
+
+    .about__stack-content {
+        grid-column: 1 / 3;
+        border: 1px dashed var(--grey-color);
+    }
+}
