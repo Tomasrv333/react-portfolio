@@ -1,7 +1,7 @@
 .header__container {
-    height: 32px;
+    height: 1.4rem;
     position: fixed;
-    background-color: white;
+    background-color: var(--color-1);
     left: 0;
     top: 0;
     right: 0;
@@ -9,15 +9,15 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 128px;
-    border-bottom: 1px solid whitesmoke;
+    border-bottom: 1px solid var(--color-3);
 }
 
 .header__logo {
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 700;
     
     a {
-        color: var(--greenLight-color);
+        color: var(--color-5);
         text-decoration: none;
     }
 }
@@ -32,11 +32,14 @@
 
         li {
             width: fit-content;
+            color: var(--color-6);
         }
     }
 
 
     .navbar__item {
+        font-size: 14px;
+        font-size: 400;
         width: 100%;
         padding: 0 1.8rem;
         transition: 1s;
@@ -45,7 +48,7 @@
 
     .navbar__item--active {
         transition: 0s;
-        border-bottom: 3px solid var(--greenLight-color);
+        border-bottom: 0.15rem solid var(--color-3);
     }
 }
 

@@ -3,9 +3,3 @@
 @use './projects';
 @use './contact';
 @use '../layout/copyMessage';
-
-.main__container {
-    width: auto;
-    padding: 0 14rem;
-    overflow: hidden;
-}
