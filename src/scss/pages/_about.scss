@@ -42,10 +42,14 @@
     } 
 
     .l-block__text {
+        font-size: 20;
+        font-weight: 400;
+        line-height: 2rem;
         margin-bottom: 2rem;
     }
 
     .l-block__subtitle {
+        font-size: 32px;
         margin-bottom: 2rem;
         color: var(--color-2);
     } 

@@ -16,10 +16,31 @@ const Footer = () => {
     return (
         <footer className='footer__container'>
             <div className='footer__info'>
-                <h3>Tomas Rios Vargas</h3>
-                <p>Desarrollador Full Stack con casi 2 años de experiencia en el desarrollo de sitios y aplicaciones web utilizando diferentes tecnologias como Javascript, Nodejs, Express, React o MongoDB</p>
+                <div className='info-footer__block'>
+                    <h4 className='block-footer__title'>Navegación</h4>
+                    <ul className='block-footer__list'>
+                        <li>Home</li>
+                        <li>Acerca de</li>
+                        <li>Proyectos</li>
+                        <li>Contacto</li>
+                    </ul>
+                </div>
+                <div className='info-footer__block'>
+                    <h4 className='block-footer__title'>Proyectos</h4>
+                    <ul className='block-footer__list'>
+                        <li>Mern Social Media App</li>
+                        <li>Mern Delivery App</li>
+                        <li>Mern E-commerce App</li>
+                        <li>Mern Task App</li>
+                    </ul>
+                </div>
+                <div className='info-footer__block'>
+                    <h4 className='block-footer__title'>Informacion</h4>
+                    <p className='block-footer__text'>Mi nombre es Tomas, vivo en Medellin / Colombia y soy desarrollador Full Stack</p>
+                </div>
             </div>
-            <div className='contactIcons__content'>
+
+            {/* <div className='contactIcons__content'>
                 <a className='icon__block' onClick={() => {
                     if (navigator.clipboard.writeText(Links.phone)) {
                         alert('Numero de contacto copiado!')
@@ -47,8 +68,8 @@ const Footer = () => {
                 <a className='icon__block' href={Links.instagram} target='_blank'>
                     <Unicons.UilInstagram />
                 </a>
-            </div>
-            <div className='legalTerms__content'>
+            </div> */}
+            <div className='footer__legal-block'>
                 <a>©2023 | Todos los derechos reservados</a>
             </div>
         </footer>
