@@ -22,3 +22,25 @@
     }
 }
 
+@mixin button-fill {
+    width: fit-content;
+    height: 3.438rem;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 1rem 2.875rem;
+    color: var(--color-3);
+    background-color: var(--color-2);
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    transition: 0.2s;
+
+    &:hover {
+        transition: 0.2s;
+        color: var(--color-2);
+        background-color: var(--color-1);
+    }
+}
