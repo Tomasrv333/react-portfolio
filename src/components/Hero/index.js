@@ -4,7 +4,7 @@ const Hero = () => {
     return (
         <div id="home" name="home" className="hero-container"
             style={{
-                backgroundImage: `url('https://res.cloudinary.com/djkjxhprl/image/upload/v1675194467/react-portfolio-background.jpg')`
+                backgroundImage: `url('https://imgcloud.s3.us-east-1.wasabisys.com/pU9JBlKJdK.jpg')`
             }}
         >
             <div className="hero-container__info-block">

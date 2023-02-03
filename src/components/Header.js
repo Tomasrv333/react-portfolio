@@ -90,8 +90,8 @@ const Header = () => {
             
           </nav>
 
-          <div className='header__icons'>
-            <Unicons.UilMoon />
+          <div className='header__button'>
+            <button className='button-outline'>Hire Me</button>
           </div>
         </header>
     </>

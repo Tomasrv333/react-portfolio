@@ -1,6 +1,6 @@
 
 .hero-container {
-    padding: 0 10rem;
+    padding: 0 14.5rem;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -17,14 +17,14 @@
         border-left: 2px solid var(--violetLight-color);
 
         .info-block__span {
-            color: var(--color-5);
-            font-size: 20px;
-            font-weight: 500;
+            color: var(--color-2);
+            font-size: 24px;
+            font-weight: 600;
         }
 
         .info-block__title {
-            color: var(--color-6);
-            font-size: 40px;
+            color: var(--color-3);
+            font-size: 64px;
             font-weight: bold;
         }
 
@@ -35,10 +35,11 @@
         }
 
         .info-block__text {
-            color: var(--color-6);
-            font-size: 16px;
+            color: var(--color-3);
+            font-size: 20px;
             font-weight: 400;
             margin-top: 2rem;
+            line-height: 32px;
         }
 
         .info-block__bottom-element {
