@@ -1,56 +1,69 @@
 @import '../abstracts/variables';
+@import '../components/buttons';
 
 .about-container {
-    height: 100vh;
-    padding: 0 14.5rem;
-    padding-top: 5rem;
-    background-color: var(--color-1);
+    display: flex;
+    position: relative;
+    height: fit-content;
+    padding: 18.438rem 14.5rem;
 
-    .about-container__title {
-        color: var(--color-5);
+    &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 40%;
+        z-index: -2;
+        transform: scaleX(-1);
+        transform: scaleY(-1);
+        background-image: url('https://imgcloud.s3.us-east-1.wasabisys.com/pU9JBlKJdK.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: top;
     }
 }
 
 .about-container__l-block {
-    color: var(--color-6);
-}
-
-.about-container__r-block {
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    grid-row: 2;
-    grid-column: 2;
-    
-    .r-block__img {
-        width: 18rem;
-        height: 18rem;
-        border-radius: 50%;
-        background-image: url('https://res.cloudinary.com/djkjxhprl/image/upload/v1675134136/WhatsApp_Image_2023-01-19_at_1.43.21_PM_q6neoq.jpg');
-        background-position: center;
-        background-size: cover;
-    }
-}
-
-.about-container__b-block {
     width: 100%;
-    height: 4rem;
     display: flex;
-    grid-auto-flow: column;
-    grid-column: 1 / 3;
-    grid-row: 3;
-    gap: 1rem;
+    flex-direction: column;
+    color: var(--color-3);
+    margin-right: 15.188rem;
 
-    .b-block__skill-card {
-        min-width: 8rem;
+    .l-block__title {
+        color: var(--color-2);
+        font-size: 64px;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    } 
+
+    .l-block__text {
+        margin-bottom: 2rem;
+    }
+
+    .l-block__subtitle {
+        margin-bottom: 2rem;
+        color: var(--color-2);
+    } 
+}
+
+.l-block__skill-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 9.375rem);
+    gap: 1.5rem;
+
+    .l-block__skill-card {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 0.4rem;
         padding: 0.4rem;
-        border: 1px solid #06D6A0;
+        border: 1px solid var(--color-3);
         border-radius: 0.6rem;
         transition: 0.4s;
         
@@ -59,12 +72,12 @@
         }
         .skill-card__text {
             margin: 0;
-            color: #06D6A0;
+            color: var(--color-3);
         }
         
         &:hover {
             color: white;
-            background-color: #06D6A0;
+            background-color: var(--color-2);
             transition: 0.4s;
             .skill-card__icon {
                 filter: brightness(0) saturate(100%) invert(100%) sepia(44%) saturate(0%) hue-rotate(312deg) brightness(103%) contrast(101%);                
@@ -73,5 +86,66 @@
                 color: white;
             }
         }    
-    } 
+    }
 }
+
+.about-container__r-block {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    .r-block__img {
+        width: 18rem;
+        height: 18rem;
+        position: relative;
+        border-radius: 50%;
+        background-image: url('https://imgcloud.s3.us-east-1.wasabisys.com/qFjSvvJfYh.png');
+        background-position: 0 3rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: 2rem;
+
+        &::after {
+            content: ' ';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            background-color: var(--color-2);
+        }
+    }
+
+    .r-block__span {
+        color: var(--color-3);
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+    .r-block__icons {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        .icons__block {
+            width: 3.375rem;
+            height: 3.375rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: var(--color-2);
+            background-color: var(--color-3)
+        }
+    }
+
+    .r-block__button {
+        @include button-fill;
+    }
+}
+
+

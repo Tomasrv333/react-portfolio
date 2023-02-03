@@ -3,3 +3,8 @@
 @use './projects';
 @use './contact';
 @use '../layout/copyMessage';
+
+
+body {
+    background-color: var(--color-1);
+}

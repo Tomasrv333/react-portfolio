@@ -1,5 +1,4 @@
 import React from 'react'
-import * as Unicons from '@iconscout/react-unicons'
 import { Link } from 'react-scroll'
 
 const Header = () => {
