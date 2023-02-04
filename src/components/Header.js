@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-scroll'
+import { useMediaQuery } from 'react-responsive'
 
 const Header = () => {
+  const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
+  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)' })
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
   const sections = document.querySelectorAll('section')
   const navbarItem = document.querySelectorAll('nav ul li')
@@ -11,9 +15,7 @@ const Header = () => {
     sections.forEach( section => {
       const sectionTop = section.offsetTop
       const sectionHeight = section.clientHeight
-      
-      
-
+    
       if (scrollY >= sectionTop - sectionHeight / 3) {
         current = section.getAttribute('id')
       }
@@ -35,59 +37,60 @@ const Header = () => {
             <a href='header__container'>Portafolio</a>
           </div>
 
-          <nav className='header__navbar'>
-            <ul>
-              <li>
-                <Link
-                  to='home'
-                  spy={true}
-                  smooth={true}
-                  duration={800}
-                  className='navbar__item'
-                  activeClass = 'navbar__item--active'
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='about'
-                  spy={true}
-                  smooth={true}
-                  duration={800}
-                  className='navbar__item'
-                  activeClass = 'navbar__item--active'
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='projects'
-                  spy={true}
-                  smooth={true}
-                  duration={800}
-                  className='navbar__item'
-                  activeClass = 'navbar__item--active'
-                >
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to='contact'
-                  spy={true}
-                  smooth={true}
-                  duration={800}
-                  className='navbar__item'
-                  activeClass = 'navbar__item--active'
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-            
-          </nav>
+          {isDesktopOrLaptop && 
+            <nav className='header__navbar'>
+              <ul>
+                <li>
+                  <Link
+                    to='home'
+                    spy={true}
+                    smooth={true}
+                    duration={800}
+                    className='navbar__item'
+                    activeClass = 'navbar__item--active'
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to='about'
+                    spy={true}
+                    smooth={true}
+                    duration={800}
+                    className='navbar__item'
+                    activeClass = 'navbar__item--active'
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to='projects'
+                    spy={true}
+                    smooth={true}
+                    duration={800}
+                    className='navbar__item'
+                    activeClass = 'navbar__item--active'
+                  >
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to='contact'
+                    spy={true}
+                    smooth={true}
+                    duration={800}
+                    className='navbar__item'
+                    activeClass = 'navbar__item--active'
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul> 
+            </nav>
+          }
 
           <div className='header__button'>
             <button className='button-outline'>Hire Me</button>
