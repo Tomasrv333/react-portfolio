@@ -1,5 +1,6 @@
 @import '../abstracts/variables';
 @import '../components/buttons';
+@import '../abstracts/mixins';
 
 .about-container {
     display: flex;
@@ -25,6 +26,15 @@
         background-size: cover;
         background-position-y: top;
     }
+
+    @include for-phone-only {
+        padding: 7rem 2rem;
+        flex-direction: column;
+
+        &::after {
+            display: none;
+        }
+    }
 }
 
 .about-container__l-block {
@@ -39,19 +49,19 @@
         font-size: 64px;
         font-weight: 700;
         margin-bottom: 2rem;
+
+        @include for-phone-only {
+            font-size: 32px;
+            margin-bottom: 1rem;
+        }
     } 
 
     .l-block__text {
-        font-size: 20;
-        font-weight: 400;
-        line-height: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 2rem;    
     }
 
     .l-block__subtitle {
-        font-size: 32px;
         margin-bottom: 2rem;
-        color: var(--color-2);
     } 
 }
 
@@ -70,13 +80,29 @@
         border: 1px solid var(--color-3);
         border-radius: 0.6rem;
         transition: 0.4s;
+
+        @include for-phone-only {
+            flex-direction: column;
+            padding: 0.5rem;
+            border: none;
+            background-color: var(--color-2);
+        }
         
         .skill-card__icon {
             width: 2.8rem;
+
+            @include for-phone-only {
+                width: 2rem;
+            }
         }
         .skill-card__text {
             margin: 0;
             color: var(--color-3);
+
+            @include for-phone-only {
+                font-size: 12px;
+                font-weight: 500;
+            }
         }
         
         &:hover {

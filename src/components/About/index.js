@@ -7,7 +7,7 @@ const About = () => {
             <div className="about-container__l-block">
                 <h1 className='l-block__title'>Acerca de mi</h1>
                 <p className="l-block__text">¡Hola! ✌ Soy un programador Full Stack con casi 2 años de experiencia en el desarrollo y el despliegue de sitios web utilizando varias tecnologías de Código abierto como NodeJs, así como otros sistemas de gestión de contenido como Wordpress. Además, he trabajado en diferentes proyectos comerciales para algunos clientes como Freelance utilizando más que todo tecnologías Front-End como Sass, Bootstrap y ReactJs. </p>
-                <h3 className="l-block__subtitle">Habilidades</h3>
+                <h2 className="l-block__subtitle">Habilidades</h2>
                 
                 <div className="l-block__skill-content">
                     <div className='l-block__skill-card'>

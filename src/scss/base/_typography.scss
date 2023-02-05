@@ -1,18 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import '../abstracts/mixins';
 
 html {
     font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-    font-size: 36px;
-    font-weight: 900;
-    color: var(--greenLight-color);
+    @include for-phone-only {
+        font-size: 32px;
+        font-weight: 800;
+        color: var(--color-2);
+    }
+
+    @include for-desktop-up {
+        font-size: 64px;
+    }
 }
 
 h2 {
-    font-size: 32px;
     font-weight: 700;
+    
+    @include for-phone-only {
+        font-size: 24px;
+        color: var(--color-2);
+    }
+
+    @include for-desktop-up {
+        font-size: 32px;
+    }
 }
 
 h3 {
@@ -31,5 +46,13 @@ a {
 
 p {
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
+
+    @include for-phone-only {
+        line-height: 22px;
+    }
+
+    @include for-desktop-up {
+        line-height: 32px;
+    }
 }
