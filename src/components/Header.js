@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 import { useMediaQuery } from 'react-responsive'
+import * as Unicons from '@iconscout/react-unicons'
 
 const Header = () => {
-  const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
-  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)' })
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  const isBigScreen = useMediaQuery({ query: '(min-width: 1800px)' })
+  const isDesktopOnly = useMediaQuery({ query: '(min-width: 1200px)' })
+  const isPhoneOnly = useMediaQuery({ query: '(max-width: 599px)' })
 
   const sections = document.querySelectorAll('section')
   const navbarItem = document.querySelectorAll('nav ul li')
@@ -37,7 +38,7 @@ const Header = () => {
             <a href='header__container'>Portafolio</a>
           </div>
 
-          {isDesktopOrLaptop && 
+          {isDesktopOnly && 
             <nav className='header__navbar'>
               <ul>
                 <li>
@@ -91,10 +92,18 @@ const Header = () => {
               </ul> 
             </nav>
           }
+          {isPhoneOnly &&
+            <div className='header__bars'>
+              <Unicons.UilBars />
+            </div>
+          }
 
+          {isDesktopOnly &&
           <div className='header__button'>
             <button className='button-outline'>Hire Me</button>
           </div>
+          }
+          
         </header>
     </>
   )

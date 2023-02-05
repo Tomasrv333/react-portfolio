@@ -1,5 +1,4 @@
 import * as Unicons from '@iconscout/react-unicons'
-import CardProject from '../CardProject'
 
 const Projects = () => {
     return (

@@ -1,4 +1,5 @@
 @import '../components/buttons';
+@import '../abstracts/mixins';
 
 .hero-container {
     height: fit-content;
@@ -6,9 +7,16 @@
     padding: 19.75rem 14.5rem;
     display: flex;
     align-items: center;
+    background-image: url('https://imgcloud.s3.us-east-1.wasabisys.com/pU9JBlKJdK.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @include for-phone-only {
+        padding: 7rem 2rem;
+        background-image: none;
+        background-color: var(--color-1);
+    }
 
     .hero-container__info-block {
         width: fit-content;
@@ -16,25 +24,53 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border-left: 2px solid var(--violetLight-color);
         margin-right: 8.125rem;
+
+        @include for-phone-only {
+            margin: 0;
+        }
 
         .info-block__span {
             color: var(--color-2);
             font-size: 24px;
             font-weight: 600;
+
+            @include for-phone-only {
+                color: var(--color-3);
+                font-size: 14px;
+                font-weight: 400;
+            }
         }
 
         .info-block__title {
             color: var(--color-3);
             font-size: 64px;
             font-weight: bold;
+
+            @include for-phone-only {
+                color: var(--color-2);
+                font-size: 48px;
+                text-transform: uppercase;
+            }
         }
 
         .info-block__subtitle {
             color: var(--color-2);
             font-size: 24px;
             font-weight: 600;
+
+            @include for-phone-only {
+                width: fit-content;
+                font-size: 16px;
+                font-weight: 400;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                color: var(--color-3);
+                background-color: var(--color-2);
+            }
         }
 
         .info-block__text {
@@ -43,6 +79,12 @@
             font-weight: 400;
             margin-top: 2.875rem;
             line-height: 32px;
+
+            @include for-phone-only {
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 22px;
+            }
         }
 
         .info-block__bottom-element {

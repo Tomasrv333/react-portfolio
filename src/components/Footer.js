@@ -1,6 +1,5 @@
 import React from 'react'
 import * as Unicons from '@iconscout/react-unicons'
-import copyMessage from './copyMessage'
 
 const Footer = () => {
 

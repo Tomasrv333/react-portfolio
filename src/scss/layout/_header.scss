@@ -1,6 +1,7 @@
 @import '../components/buttons';
 
 .header__container {
+    width: 100vw;
     height: 4rem;
     position: fixed;
     padding: 0 14.5rem;
@@ -12,6 +13,11 @@
     align-items: center;
     justify-content: space-between;
     z-index: 10;
+
+    @include for-phone-only {
+        padding: 0 2rem;
+        border-bottom: 0.1rem solid var(--color-2);
+    }
 }
 
 .header__logo {
@@ -23,6 +29,11 @@
     a {
         color: var(--color-3);
         text-decoration: none;
+    }
+
+    @include for-phone-only {
+        font-size: 14px;
+        font-weight: 500;
     }
 }
 
@@ -62,4 +73,10 @@
     .button-outline {
         @include button-outline;
     }
+}
+
+.header__bars {
+    display: flex;
+    color: var(--color-3);
+    align-items: center;
 }

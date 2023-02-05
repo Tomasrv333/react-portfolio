@@ -1,9 +1,9 @@
 @use './base/typography';
 @use './components/buttons';
-@use './components/cardProject';
-@use './layout/header';
-@use './layout/footer';
-@use './pages/home'; 
+@import './abstracts/mixins';
+@import './layout/header';
+@import './layout/footer';
+@import './pages/home'; 
 
 * {
     margin: 0;
