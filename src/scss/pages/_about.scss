@@ -35,6 +35,10 @@
             display: none;
         }
     }
+
+    @include for-desktop-up {
+        padding: 7rem 9.5rem;
+    }
 }
 
 .about-container__l-block {

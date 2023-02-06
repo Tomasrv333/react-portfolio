@@ -1,5 +1,5 @@
-@use './base/typography';
-@use './components/buttons';
+@import './base/typography';
+@import './components/buttons';
 @import './abstracts/mixins';
 @import './layout/header';
 @import './layout/footer';

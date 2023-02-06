@@ -2,9 +2,8 @@
 @import '../abstracts/mixins';
 
 .hero-container {
-    height: fit-content;
-    margin-top: 4rem;
-    padding: 19.75rem 14.5rem;
+    height: 100vh;
+    padding: 0 14.5rem;
     display: flex;
     align-items: center;
     background-image: url('https://imgcloud.s3.us-east-1.wasabisys.com/pU9JBlKJdK.jpg');
@@ -17,14 +16,21 @@
         background-image: none;
         background-color: var(--color-1);
     }
+    @include for-tablet-portrait-up {
+        padding: 0 9.5rem;
+    }
+    @include for-desktop-up {
+        padding: 0 9.5rem;
+        display: flex;
+        align-items: center;
+    }
 
     .hero-container__info-block {
-        width: fit-content;
         height: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-right: 8.125rem;
+        margin-right: 16rem;
 
         @include for-phone-only {
             margin: 0;
@@ -40,11 +46,20 @@
                 font-size: 14px;
                 font-weight: 400;
             }
+
+            @include for-desktop-up {
+                font-size: 18px;
+                font-weight: 500;
+            }
         }
 
         .info-block__title {
             @include for-phone-only {
                 display: none;
+                color: var(--color-2);
+            }
+            @include for-desktop-up {
+                color: var(--color-3);
             }
         }
 
@@ -53,7 +68,7 @@
             text-transform: uppercase;
 
             @include for-tablet-portrait-up {
-                display: block;
+                display: none;
             }
         }
 
@@ -73,6 +88,11 @@
                 gap: 0.5rem;
                 color: var(--color-3);
                 background-color: var(--color-2);
+            }
+
+            @include for-desktop-up {
+                font-size: 20px;
+                font-weight: 500;
             }
 
             .subtitle__icon--mobile {
@@ -110,12 +130,15 @@
                 @include for-phone-only {
                     display: none;
                 }
+
+                @include for-desktop-up {
+                    font-size: 14px;
+                }
             }
         }
     }
 
     .hero-container__icons-block {
-        width: fit-content;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -125,6 +148,10 @@
 
         @include for-phone-only {
             display: none;
+        }
+
+        @include for-desktop-up {
+            align-content: center;
         }
     
         .icons-block__icon {
@@ -138,13 +165,23 @@
             align-items: center;
             border-radius: 50%;
             margin-bottom: 0.8rem;
+
+            @include for-desktop-up {
+                width: 2.225rem;
+                height: 2.225rem;
+                padding: 0.1rem;
+            }
         }
 
         .icons-block__line {
-            margin: auto;
+            margin: 0 auto;
             width: 1px;
             height: 14.813rem;
             background-color: var(--color-3);
+
+            @include for-desktop-up {
+                height: 10rem;
+            }
         }
     }
 }

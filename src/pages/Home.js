@@ -6,8 +6,8 @@ import Projects from "../components/Projects"
 const Home = () => {
     return (
         <>
-            <Hero />
             <main className="main__container">
+                <Hero />
                 <About />
                 <Projects />
                 <Contact />

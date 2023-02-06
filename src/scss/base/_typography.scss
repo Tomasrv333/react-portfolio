@@ -6,26 +6,43 @@ html {
 }
 
 h1 {
+    color: var(--color-2);
+
     @include for-phone-only {
         font-size: 32px;
         font-weight: 800;
-        color: var(--color-2);
+    }
+
+    @include for-small-desktop {
+        font-size: 26rem;
     }
 
     @include for-desktop-up {
+        font-size: 32px;
+    }
+
+    @include for-big-desktop-up {
         font-size: 64px;
     }
 }
 
 h2 {
     font-weight: 700;
-    
+    color: var(--color-2);
+
     @include for-phone-only {
         font-size: 24px;
-        color: var(--color-2);
+    }
+
+    @include for-small-desktop {
+        font-size: 20px;
     }
 
     @include for-desktop-up {
+        font-size: 24px;
+    }
+
+    @include for-big-desktop-up {
         font-size: 32px;
     }
 }
@@ -53,6 +70,10 @@ p {
     }
 
     @include for-desktop-up {
+        line-height: 24px;
+    }
+
+    @include for-big-desktop-up {
         line-height: 32px;
     }
 }

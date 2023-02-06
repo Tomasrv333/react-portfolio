@@ -29,11 +29,12 @@ const Header = () => {
   return (
     <>
         <header className='header__container'>
-          <div className='header__logo'>
-            <a href='header__container'>Portafolio</a>
-          </div>
-
-          <nav className='header__navbar'>
+          <div className='header__content'>
+            <div className='header__logo'>
+              <a href='header__container'>Portafolio</a>
+            </div>
+    
+            <nav className='header__navbar'>
               <ul>
                 <li>
                   <Link
@@ -85,14 +86,16 @@ const Header = () => {
                 </li>
               </ul> 
             </nav>
-          <div className='header__bars'>
-            <Unicons.UilBars />
+    
+            <div className='header__side'>
+              <button className='side__button'>Hire Me</button>
+    
+              <div className='side__icon-menu'>
+                <Unicons.UilBars />
+              </div>
+            </div>
           </div>
 
-          <div className='header__button'>
-            <button className='button-outline'>Hire Me</button>
-          </div>
-          
         </header>
     </>
   )

@@ -1,11 +1,15 @@
 import * as Unicons from '@iconscout/react-unicons'
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const About = () => {
     return (
         <section id="about" className="about-container"
         >
             <div className="about-container__l-block">
-                <h1 className='l-block__title'>Acerca de mi</h1>
+                <AnimationOnScroll animateIn='animate__fadeInDown'>
+                    <h1 className='l-block__title'>Acerca de mi</h1>
+
+                </AnimationOnScroll>
                 <p className="l-block__text">¡Hola! ✌ Soy un programador Full Stack con casi 2 años de experiencia en el desarrollo y el despliegue de sitios web utilizando varias tecnologías de Código abierto como NodeJs, así como otros sistemas de gestión de contenido como Wordpress. Además, he trabajado en diferentes proyectos comerciales para algunos clientes como Freelance utilizando más que todo tecnologías Front-End como Sass, Bootstrap y ReactJs. </p>
                 <h2 className="l-block__subtitle">Habilidades</h2>
                 
