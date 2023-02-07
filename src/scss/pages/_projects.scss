@@ -33,12 +33,10 @@
     }
 
     @include for-desktop-up {
-        padding: 7rem 9.5rem;
+        padding: 5rem 9.5rem;
     }
 
     .projects__title {
-        color: var(--color-2);
-        font-size: 4rem;
         margin-bottom: 2rem;
 
         @include for-phone-only {

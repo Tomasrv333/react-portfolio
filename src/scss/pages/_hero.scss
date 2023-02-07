@@ -5,6 +5,7 @@
     height: 100vh;
     padding: 0 14.5rem;
     display: flex;
+    justify-content: center;
     align-items: center;
     background-image: url('https://imgcloud.s3.us-east-1.wasabisys.com/pU9JBlKJdK.jpg');
     background-repeat: no-repeat;
@@ -21,16 +22,14 @@
     }
     @include for-desktop-up {
         padding: 0 9.5rem;
-        display: flex;
-        align-items: center;
     }
 
     .hero-container__info-block {
         height: fit-content;
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        margin-right: 16rem;
+        flex-direction: column;
+        text-align: center;
 
         @include for-phone-only {
             margin: 0;
@@ -38,101 +37,69 @@
 
         .info-block__span {
             color: var(--color-2);
-            font-size: 24px;
-            font-weight: 600;
-
-            @include for-phone-only {
-                color: var(--color-3);
-                font-size: 14px;
-                font-weight: 400;
-            }
-
-            @include for-desktop-up {
-                font-size: 18px;
-                font-weight: 500;
-            }
+            font-size: 14px;
         }
 
         .info-block__title {
-            @include for-phone-only {
-                display: none;
-                color: var(--color-2);
-            }
-            @include for-desktop-up {
-                color: var(--color-3);
-            }
-        }
-
-        .info-block__title--mobile {
-            font-size: 44px;
-            text-transform: uppercase;
-
-            @include for-tablet-portrait-up {
-                display: none;
-            }
-        }
-
-        .info-block__subtitle {
             color: var(--color-2);
-            font-size: 24px;
-            font-weight: 600;
 
             @include for-phone-only {
+                display: none;
+            }
+        }
+
+        .info-block__tag {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .tag__hr {
+                width: 20%;
+                rotate: 0deg;
+                border: 1px solid var(--color-2);
+            }
+
+            .tag__span {
                 width: fit-content;
-                font-size: 16px;
-                font-weight: 400;
-                padding: 0.5rem;
-                border-radius: 0.5rem;
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                color: var(--color-3);
-                background-color: var(--color-2);
-            }
-
-            @include for-desktop-up {
-                font-size: 20px;
+                color: var(--color-2);
+                padding: 0.3rem 0.6rem;
+                font-size: 12px;
                 font-weight: 500;
-            }
-
-            .subtitle__icon--mobile {
-                display: flex;
-                align-items: center;
-                
-                @include for-desktop-up {
-                    display: none;
-                }
             }
         }
 
         .info-block__text {
-            margin-top: 2.875rem;
+            width: 63%;
             color: var(--color-3);
+            margin: 0 auto;
+            margin-top: 1.5rem;
         }
 
         .info-block__bottom-element {
-            margin-top: 5rem;
+            margin-top: 3rem;
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 1.5rem;
+            flex-direction: column;
+            gap: 0.5rem;
 
             .bottom-element__button {
-                @include button-fill;
+                @include button-outline;
             }
 
             .bottom-element__span {
                 color: var(--color-3);
-                font-size: 16px;
+                font-size: 12px;
+                opacity: 0.2;
                 font-weight: 300;
                 display: flex;
                 align-items: center;
 
                 @include for-phone-only {
                     display: none;
-                }
-
-                @include for-desktop-up {
-                    font-size: 14px;
                 }
             }
         }

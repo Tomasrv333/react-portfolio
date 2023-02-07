@@ -36,6 +36,7 @@ const Footer = () => {
                 <div className='info-footer__block'>
                     <h4 className='block-footer__title'>Informacion</h4>
                     <p className='block-footer__text'>Mi nombre es Tomas, vivo en Medellin / Colombia y soy desarrollador Full Stack</p>
+                    <a href="https://www.freepik.com/free-vector/character-with-virtual-reality-glasses-wheel-playing-race-game-isometric_16716959.htm#query=svg&position=48&from_view=search&track=sph">Image by macrovector</a> on Freepik
                 </div>
             </div>
 
