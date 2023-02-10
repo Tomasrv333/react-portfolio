@@ -15,6 +15,14 @@
         border-bottom: 0.1rem solid var(--color-2);
     }
 
+    @include for-tablet-portrait-up {
+        padding: 0 4rem;
+    }
+
+    @include for-small-desktop {
+        padding: 0 6rem;
+    }
+
     @include for-desktop-up {
         padding: 0 9.5rem;
     }
@@ -59,7 +67,7 @@
         }
     }
 
-    @include for-phone-only {
+    @include for-tablet-portrait-up {
         display: none;
     }
 
@@ -86,7 +94,7 @@
 
     .side__button {
         @include button-outline;
-        @include for-phone-only {
+        @include for-tablet-portrait-up {
             display: none;
         }
     }
@@ -94,7 +102,7 @@
     .side__icon-menu {
         color: var(--color-3);
 
-        @include for-tablet-portrait-up {
+        @include for-small-desktop {
             display: none;
         }
     }

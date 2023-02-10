@@ -34,7 +34,10 @@
         background-color: var(--color-1);
     }
     @include for-tablet-portrait-up {
-        padding: 0 9.5rem;
+        padding: 0 4rem;
+    }
+    @include for-small-desktop {
+        padding: 0 6rem;
     }
     @include for-desktop-up {
         padding: 0 9.5rem;
@@ -99,14 +102,20 @@
     .hero-container__img-block {
 
         .img-block__img {
-
             @include for-phone-only {
                 display: none;
             }
 
+            @include for-tablet-portrait-up {
+                width: 16rem;
+            }
+
             @include for-small-desktop {
+                width: 24rem;
+            }
+
+            @include for-desktop-up {
                 width: 30rem;
-                margin-right: -3rem;
             }
         }
     }

@@ -57,7 +57,7 @@ const Header = () => {
                     className='navbar__item'
                     activeClass = 'navbar__item--active'
                   >
-                    About
+                    Acerca de
                   </Link>
                 </li>
                 <li>
@@ -69,7 +69,7 @@ const Header = () => {
                     className='navbar__item'
                     activeClass = 'navbar__item--active'
                   >
-                    Projects
+                    Proyectos
                   </Link>
                 </li>
                 <li>
@@ -81,7 +81,7 @@ const Header = () => {
                     className='navbar__item'
                     activeClass = 'navbar__item--active'
                   >
-                    Contact
+                    Contacto
                   </Link>
                 </li>
               </ul> 
