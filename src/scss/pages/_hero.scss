@@ -28,7 +28,8 @@
     }
 
     @include for-phone-only {
-        padding: 7rem 2rem;
+        flex-direction: column-reverse;
+        padding: 0 2rem;
         background-image: none;
         background-color: var(--color-1);
     }
@@ -46,6 +47,7 @@
 
         @include for-phone-only {
             margin: 0;
+            text-align: center;
         }
 
         .title__span {
@@ -56,23 +58,27 @@
             font-size: 14px;
             font-weight: 500;
             border-bottom: 1px solid var(--color-2);
+            
+            @include for-phone-only {
+                margin: 0 auto;
+                padding-right: 0;
+                padding: 0 1rem;
+                padding-bottom: 0.6rem;
+            }
         }
 
         .info-block__title {
             margin-top: 0.3rem;
-            color: var(--color-2);
-            font-size: 40px;
-            font-weight: 900;
-
-            @include for-phone-only {
-                display: none;
-            }
         }
 
         .info-block__text {
             width: 85%;
             color: var(--color-3);
             margin-top: 1.5rem;
+
+            @include for-phone-only {
+                width: 100%;
+            }
         }
 
         .info-block__bottom-element {
@@ -84,41 +90,24 @@
                 @include button-fill;
             }
 
-            .bottom-element__button--cv {
-                @include button-outline;
+            @include for-phone-only {
+                justify-content: center;
             }
-
-            .bottom-element__span {
-                color: var(--color-3);
-                font-size: 12px;
-                opacity: 0.2;
-                font-weight: 300;
-                display: flex;
-                align-items: center;
-
-                @include for-phone-only {
-                    display: none;
-                }
-            }
-        }
-
-        .info-block__span--scroll {
-            font-size: 14px;
-            font-weight: 300;
-            color: var(--color-3);
-            display: flex;
-            align-items: center;
-            margin: 0 auto;
-            margin-top: 4rem;
-            opacity: 0.2;
         }
     }
 
     .hero-container__img-block {
 
         .img-block__img {
-            width: 30rem;
-            margin-right: -3rem;
+
+            @include for-phone-only {
+                display: none;
+            }
+
+            @include for-small-desktop {
+                width: 30rem;
+                margin-right: -3rem;
+            }
         }
     }
 }

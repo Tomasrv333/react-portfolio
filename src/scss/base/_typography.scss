@@ -7,14 +7,14 @@ html {
 
 h1 {
     color: var(--color-2);
+    font-weight: 800;
 
     @include for-phone-only {
         font-size: 32px;
-        font-weight: 800;
     }
 
     @include for-small-desktop {
-        font-size: 26rem;
+        font-size: 26px;
     }
 
     @include for-desktop-up {
@@ -48,8 +48,23 @@ h2 {
 }
 
 h3 {
-    font-size: 24px;
     font-weight: 500;
+
+    @include for-phone-only {
+        font-size: 20px;
+    }
+
+    @include for-small-desktop {
+        font-size: 18px;
+    }
+
+    @include for-desktop-up {
+        font-size: 20px;
+    }
+
+    @include for-big-desktop-up {
+        font-size: 24px;
+    }
 }
 
 li, span {

@@ -26,7 +26,7 @@
     }
 
     @include for-phone-only {
-        padding: 7rem 2rem;
+        padding: 4rem 2rem;
 
         &::after {
             display: none;
@@ -41,8 +41,8 @@
         margin-bottom: 2rem;
 
         @include for-phone-only {
-            font-size: 32px;
             margin-bottom: 1rem;
+            text-align: center;
         }
     }
 }
@@ -51,116 +51,84 @@
     @include for-phone-only {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
     }
 
     @include for-desktop-up {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
+        gap: 2rem;
         align-items: end;
     }
 
-    .projects__card--info {
-        display: flex;
+    
+}
+
+.projects__card {
+    height: 24rem;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    color: var(--color-2);
+    background-color: var(--color-3);
+    overflow: hidden;
+
+    @include for-phone-only {
+        height: 7.5rem;
+        flex-direction: row;
+    }
+
+    .card__img {
         width: 100%;
         height: 100%;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border-radius: 0.5rem;
-        color: var(--color-3);
-        background-color: var(--color-2);
+        background-image: url('https://i.ibb.co/C2tVfy4/474596a57830bfdb9a443a1ae6220270.webp');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
 
-        h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 1rem;
+        @include for-phone-only {
+            width: 30%;
+        }
+    }
+
+    .card__box-text {
+        padding: 0.5rem 1rem;
+        height: 90%;
+
+        @include for-phone-only {
+            height: 100%;
+            padding: 1rem;
         }
 
-        p {
-            font-size: 14px;
-            padding: 0 1rem;
-            margin-bottom: 1rem;
-        }
-
-        button {
+        .box-text__block-title {
             display: flex;
-            justify-content: center;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.4rem 0.8rem;
-            color: var(--color-2);
-            background-color: var(--color-3);
-            border-radius: 0.5rem;
-            border: none;
+            gap: 0.6rem;
         }
 
-        @include for-phone-only {
-            display: none;
-        }
-    }
-
-    .projects__card--more {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border-radius: 0.5rem;
-        color: var(--color-3);
-        background-color: var(--color-1);
-    }
-
-    .projects__card {
-        height: 25rem;
-        padding: 1.5rem;
-        border-radius: 0.2rem;
-        display: flex;
-        flex-direction: column;
-        row-gap: 0.5rem;
-        color: var(--color-2);
-        background-color: var(--color-1);
-        border: 1px solid var(--color-2);
-
-        @include for-phone-only {
-            height: 7.5rem;
-        }
-
-        .card__title {
-        }
-
-        .card__span {
-            font-size: 14px;
-            color: var(--color-3);
+        .box-text__span {
+            font-size: 12px;
+            font-weight: 400;
+            color: var(--color-1);
             opacity: 0.4;
         }
 
-        .card__img {
-            width: 100%;
-            height: 12rem;
+        .box-text__p {
+            color: var(--color-1);
+            margin-top: 1rem;
+            font-size: 14px;
         }
+    }
 
-        .card__text {
-            color: var(--color-3);
-        }
-
-        .card__button-block {
-            display: flex;
-            justify-content: space-between;
-            gap: 0.5rem;
-
-            .button-block--outline {
-                @include button-outline;
-            }
-
-            .button-block--fill {
-                @include button-fill;
-                padding: 1rem 0.6rem;
-            }
+    .card__button {
+        padding: 1rem 0;
+        border: none;
+        color: var(--color-3);
+        background-color: var(--color-2);
+    
+        @include for-phone-only {
+            width: 16%;
         }
     }
 }

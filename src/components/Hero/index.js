@@ -12,9 +12,6 @@ const Hero = () => {
                     <button className='bottom-element__button'>
                         Comencemos!
                     </button>
-                    <button className='bottom-element__button--cv'>
-                        CV
-                    </button>
                 </div>
             </div>
             <div className='hero-container__img-block'>
