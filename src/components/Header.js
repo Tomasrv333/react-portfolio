@@ -57,7 +57,7 @@ const Header = () => {
                     className='navbar__item'
                     activeClass = 'navbar__item--active'
                   >
-                    Acerca de
+                    Perfil
                   </Link>
                 </li>
                 <li>
@@ -88,7 +88,7 @@ const Header = () => {
             </nav>
     
             <div className='header__side'>
-              <button className='side__button'>Hire Me</button>
+              <button className='side__button'>CV<Unicons.UilFileDownload /> </button>
     
               <div className='side__icon-menu'>
                 <Unicons.UilBars />

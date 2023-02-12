@@ -77,13 +77,13 @@
         font-size: 400;
         width: 100%;
         padding: 0 1.8rem;
-        transition: 1s;
         cursor: pointer;
     }
 
     .navbar__item--active {
-        transition: 0s;
-        border-bottom: 0.15rem solid var(--color-2);
+        border-bottom: 1px solid transparent;
+        border-image: linear-gradient(0.25turn, rgba(0, 0, 0, 0), var(--color-2), rgba(0, 0, 0, 0)) 1 100%;
+        border-image-slice: 1;
     }
 }
 

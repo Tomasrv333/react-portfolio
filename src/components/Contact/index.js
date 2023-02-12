@@ -26,6 +26,7 @@ const Contact = () => {
 
                 if (response.status === 200) {
                     setMessage('Mensaje enviado!')
+                    console.log(data)
                 }
             })
             .then(() => {

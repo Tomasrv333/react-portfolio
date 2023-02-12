@@ -7,7 +7,6 @@
     grid-template-columns: 1fr 1fr;
     position: relative;
     height: fit-content;
-    padding: 18.438rem 14.5rem;
 
     @include for-phone-only {
         display: flex;
@@ -21,11 +20,11 @@
     }
 
     @include for-small-desktop {
-        padding: 4rem 6rem;
+        padding: 5rem 6rem;
     }
 
     @include for-desktop-up {
-        padding: 5rem 9.5rem;
+        padding: 7rem 9.5rem;
     }
 }
 

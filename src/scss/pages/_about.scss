@@ -3,10 +3,10 @@
 @import '../abstracts/mixins';
 
 .about-container {
-    display: flex;
-    position: relative;
     height: fit-content;
-    padding: 18.438rem 14.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
 
     &::after {
         content: ' ';
@@ -18,7 +18,7 @@
         height: 100%;
         opacity: 40%;
         z-index: -2;
-        transform: scaleX(1);
+        transform: scaleX(-1);
         transform: scaleY(1);
         background-image: url('https://imgcloud.s3.us-east-1.wasabisys.com/pU9JBlKJdK.jpg');
         background-position: center;
@@ -37,167 +37,153 @@
         }
     }
 
-    @include for-tablet-portrait-up {
-        flex-direction: column-reverse;
-    }
-
     @include for-small-desktop {
-        padding: 2rem 6rem;
+        padding: 10rem 6rem;
+        display: grid;
     }
 
     @include for-desktop-up {
-        padding: 5rem 9.5rem;
+        padding: 10rem 9.5rem;
     }
+
+    .about-container__title {
+        margin-bottom: 1rem;
+
+        @include for-phone-only {
+            margin-bottom: 1rem;
+        }
+    } 
+}
+
+.about-container__content {
+    display: flex;
+    align-items: flex-start;
 }
 
 .about-container__l-block {
     width: 100%;
     display: flex;
     flex-direction: column;
+    border-right: 1px solid transparent;
+    border-image: linear-gradient(to bottom, var(--color-2), rgba(0, 0, 0, 0)) 1 100%;
+    border-image-slice: 1;
     color: var(--color-3);
-    margin-right: 8rem;
-    padding-right: 6rem;
+    padding-right: 4rem;
 
     @include for-tablet-portrait-up {
         padding: 0;
         text-align: center;
     }
 
-    .l-block__title {
-        margin-bottom: 2rem;
-
-        @include for-phone-only {
-            margin-bottom: 1rem;
-        }
-    } 
+    .l-block__subtitle {
+        margin-bottom: 1rem;
+    }
 
     .l-block__text {
         margin-bottom: 2rem; 
+        text-align: justify;
         
         @include for-phone-only {
-            text-align: justify;
+            
         }
-    }
-
-    .l-block__subtitle {
-        margin-bottom: 2rem;
-    } 
-}
-
-.l-block__skill-content {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 9.375rem);
-    gap: 1.2rem;
-
-    @include for-tablet-portrait-up {
-        justify-content: center;
-    }
-
-    .l-block__skill-card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.4rem;
-        padding: 0.4rem;
-        border: 1px solid var(--color-3);
-        border-radius: 0.6rem;
-        transition: 0.4s;
-
-        @include for-phone-only {
-            flex-direction: column;
-            padding: 0.5rem;
-            border: none;
-            background-color: var(--color-2);
-        }
-        
-        .skill-card__icon {
-            width: 2.4rem;
-
-            @include for-phone-only {
-                width: 2rem;
-            }
-        }
-        .skill-card__text {
-            margin: 0;
-            color: var(--color-3);
-
-            @include for-phone-only {
-                font-size: 12px;
-                font-weight: 500;
-            }
-        }
-        
-        &:hover {
-            color: white;
-            background-color: var(--color-2);
-            transition: 0.4s;
-            .skill-card__icon {
-                filter: brightness(0) saturate(100%) invert(100%) sepia(44%) saturate(0%) hue-rotate(312deg) brightness(103%) contrast(101%);                
-            }
-            .skill-card__text {
-                color: white;
-            }
-        }    
     }
 }
 
 .about-container__r-block {
+    width: 100%;
     height: fit-content;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     text-align: center;
-    
-    .r-block__img {
-        width: 16rem;
-        height: 16rem;
-        position: relative;
-        border-radius: 50%;
-        background-image: url('https://imgcloud.s3.us-east-1.wasabisys.com/qFjSvvJfYh.png');
-        background-position: 0 3rem;
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-bottom: 2rem;
+    padding-left: 4rem;
 
-        &::after {
-            content: ' ';
-            display: block;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            border-radius: 50%;
-            z-index: -1;
-            background-color: var(--color-2);
-        }
+    .r-block__subtitle {
+        text-align: start;
+        margin-bottom: 1rem;
     }
 
-    .r-block__span {
+    .r-block__text {
         color: var(--color-3);
+        line-height: 22px;
+        text-align: start;
+        margin-bottom: 1.6rem;
     }
+}
 
-    .r-block__icons {
-        display: flex;
-        justify-content: space-evenly;
-        gap: 2rem;
-        margin: 2rem auto;
+.content__ability {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
 
-        .icons__block {
-            width: 3rem;
-            height: 3rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
+    .ability__block {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+
+        .card__info {
             color: var(--color-2);
-            background-color: var(--color-3)
+            padding: 0.8rem;
+            background-color: var(--color-1);
+            border-radius: 0.2rem;
+
+            h4 {
+                margin-bottom: 0.4rem;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 22px;
+                color: var(--color-3);
+            }
         }
     }
+}
 
-    .r-block__button {
-        @include button-fill;
-        margin: 0 auto;
+.content__skill {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .skill__box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.2rem;
+        background: linear-gradient(var(--color-2), #00000000);
+
+        .skill__title {
+            color: var(--color-3);
+        }
+
+        .skill__icon {
+            color: var(--color-3);
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed var(--color-1);
+        }
+
+        .skill__name {
+            height: 100%;
+            color: var(--color-3);
+            opacity: 0.9;
+            gap: 0.2rem;
+            padding: 0.8rem;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+                font-size: 14px;
+                border-radius: 0.2rem;
+                padding: 0.3rem;
+                margin-bottom: 0.6rem;
+            }
+
+            img {
+                width: 1.6rem;
+            }
+        }
     }
 }
 

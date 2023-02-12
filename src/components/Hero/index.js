@@ -14,7 +14,14 @@ const Hero = () => {
             <div className="hero-container__info-block">
                 <span className='title__span'>Full Stack Developer</span>
                 <h1 className='info-block__title'>Tomás Ríos Vargas</h1>
-                <p className='info-block__text'>Soy desarrollador Full Stack y llevo 2 años trabajando en el desarrollo de sitios y aplicaciones web a traves de diferentes lenguajes y frameworks como JavaScript, NodeJs, Express, ReactJs, MongoDb y MySQL</p>
+                <p className='info-block__text'>Bienvenido a mi portafolio! Encuentra aquí toda la información relacionada con mi perfil como desarrollador; las tecnologías que manejo y mi experiencia en proyectos personales como Full Stack.<br></br> ¡Descarga mi CV y contáctame ahora!</p>
+                <span className='info-block__copy-title'>E-mail</span>
+                <div className='info-block__copy-box'>
+                    <p className='copy-box__text'>tomasrv123@gmail.com</p>
+                    <div className='copy-box__icon'>
+                        <Unicons.UilCopy />
+                    </div>
+                </div>
                 <div className='info-block__bottom-element'>
                     <button className='bottom-element__button' onClick={handleClickScroll}>
                         Comencemos!
@@ -22,7 +29,19 @@ const Hero = () => {
                 </div>
             </div>
             <div className='hero-container__img-block'>
-                <img className='img-block__img' src='/images/background-img.png'></img>
+                <div className='img-block__img'></div>
+            </div>
+            <div className='hero-container__icons'>
+                <div className='icons__block'>
+                    <Unicons.UilLinkedin />
+                </div>
+                <div className='icons__block'>
+                    <Unicons.UilGithubAlt />
+                </div>
+                <div className='icons__block'>
+                    <Unicons.UilFacebookF />
+                </div>
+                <p className='icons__text'>Medellin | Colombia</p>
             </div>
             
         </div>

@@ -4,7 +4,6 @@
 .projects__container {
     position: relative;
     height: fit-content;
-    padding: 12rem 14.5rem;
 
     &::after {
         content: ' ';
@@ -16,7 +15,7 @@
         height: 100%;
         opacity: 40%;
         z-index: -2;
-        transform: scaleX(-1);
+        transform: scaleX(1);
         transform: scaleY(-1);
         background-image: url('https://imgcloud.s3.us-east-1.wasabisys.com/pU9JBlKJdK.jpg');
         background-position: center;
@@ -34,11 +33,11 @@
     }
 
     @include for-small-desktop {
-        padding: 4rem 6rem;
+        padding: 5rem 6rem;
     }
 
     @include for-desktop-up {
-        padding: 5rem 9.5rem;
+        padding: 7rem 9.5rem;
     }
 
     .projects__title {

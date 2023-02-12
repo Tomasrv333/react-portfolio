@@ -67,9 +67,30 @@ h3 {
     }
 }
 
+h4 {
+    font-weight: 400;
+
+    @include for-phone-only {
+        font-size: 20px;
+    }
+
+    @include for-small-desktop {
+        font-size: 18px;
+    }
+
+    @include for-desktop-up {
+        font-size: 18px;
+    }
+
+    @include for-big-desktop-up {
+        font-size: 22px;
+    }
+}
+
 li, span {
     font-size: 16px;
     font-weight: 400;
+    list-style: none;
 }
 
 a {
