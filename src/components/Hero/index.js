@@ -1,4 +1,5 @@
 import * as Unicons from '@iconscout/react-unicons'
+import Button from '@mui/material/Button';
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 const Hero = () => {
@@ -23,9 +24,9 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className='info-block__bottom-element'>
-                    <button className='bottom-element__button' onClick={handleClickScroll}>
+                    <Button variant='contained' disableElevation onClick={handleClickScroll}>
                         Comencemos!
-                    </button>
+                    </Button>
                 </div>
             </div>
             <div className='hero-container__img-block'>
