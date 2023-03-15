@@ -1,18 +1,45 @@
 import * as Unicons from '@iconscout/react-unicons'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { useTheme, Container, Box, Typography } from '@mui/material';
+import { tokens } from '../../theme';
+import CardProject from './CardProject';
 
 const Projects = () => {
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
+
     return (
         <Container
             sx={{
                 width: '100%',
+                height: '100vh',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center'
             }}
         >
-            <Box>
-                
+            <Box
+                width='51vw'
+                height='100vh'
+                display='flex'
+                flexDirection='column'
+                justifyContent='center'
+            >
+                <Typography
+                    variant='h6'
+                    fontWeight={600}
+                    color={colors.blueAccent[600]}
+                >
+                    Proyectos
+                </Typography>
+                <Typography
+                    variant='h5'
+                    fontWeight={600}
+                    color={colors.primary[800]}
+                >
+                    Cada proyecto ha sido un proceso de aprendizaje
+                </Typography>
+                <CardProject/>
             </Box>
         </Container>
         // <section id="projects" className="projects__container">
