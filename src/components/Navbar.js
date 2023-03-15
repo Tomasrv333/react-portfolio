@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-scroll'
-import { styled, useTheme } from '@mui/material/styles';
-import { Button, List, ListItemButton, AppBar, Box, Divider, Drawer, IconButton, ListItem, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material'
+import { ColorModeContext, tokens } from "../theme";
+import { styled, useTheme, List, ListItemButton, AppBar, Box, Divider, Drawer, IconButton, ListItem, ListItemIcon, ListItemText, Toolbar, Typography, Avatar } from '@mui/material'
 import useMediaQuery from '@mui/material/useMediaQuery';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
@@ -27,6 +27,8 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 const MobileNavbar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const colorMode = useContext(ColorModeContext);
+
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -40,20 +42,39 @@ const MobileNavbar = () => {
   return (
     <Box sx={ { display: 'flex' }}>
       <AppBar position='fixed' open={open}>
-        <Toolbar>
-          <IconButton
-            color='inherit'
-            aria-label='open drawer'
-            onClick={handleDrawerOpen}
-            edge='start'
-            sx={{ mr: 2, ...(open && { display: 'none' }) }}
+        <Box
+          display='flex'
+          justifyContent='space-between'
+          p={2}
+        >
+          <Box
+            display="flex"
+            alignItems='center'
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant='h5' noWrap component='div'>
-            Portafolio
-          </Typography>
-        </Toolbar>
+            <IconButton
+              color='inherit'
+              aria-label='open drawer'
+              onClick={handleDrawerOpen}
+              edge='start'
+              sx={{ mr: 2, ...(open && { display: 'none' }) }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant='h5' noWrap component='div'>
+              Portafolio
+            </Typography>
+          </Box>
+          
+          <Box display="flex">
+            <IconButton onClick={colorMode.toggleColorMode}>
+                {theme.palette.mode === 'dark' ? (
+                    <DarkModeOutlinedIcon />
+                ) : (
+                    <LightModeOutlinedIcon />
+                )}
+            </IconButton>
+          </Box>
+        </Box>
       </AppBar>
       <Drawer
         sx={{
@@ -100,30 +121,72 @@ const DesktopNavbar = () => {
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <Box sx={ { display: 'flex'}}>
-      <AppBar position='fixed' >
-        <Toolbar sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
-          <Typography>
+    <Box 
+      display="flex" 
+      width="100%" position="fixed"
+      backgroundColor={theme.palette.mode === 'dark' ? (
+        colors.primary[50]
+      ) : (
+        colors.darkAccent[900]
+      )}
+      p={1.6}
+      zIndex='100'
+    >
+      <Box
+        width="100%"
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <Box>
+          <Typography
+            variant='h5'
+            fontWeight={600}
+            marginLeft={6}
+            color={theme.palette.mode === 'dark' ? (
+              colors.blueAccent[600]
+            ) : (
+              colors.primary[50]
+            )}
+          >
             Portafolio
           </Typography>
-          <Box sx={{ display: 'flex', gap: 4 }}>
-            {['Home', 'Perfil', 'Proyectos', 'Contacto'].map((text, index) => (
-              <Typography variant='a'>
-                {text}
-              </Typography>
-            ))}
-          </Box>
-          <Box display="flex">
+        </Box>
+        <Box 
+          display='flex'
+          alignItems='center'
+          gap='1.6rem'
+        >
+          {['Home', 'Perfil', 'Proyectos', 'Contacto'].map((text, index) => (
+            <Typography
+              fontWeight={600}
+              color={theme.palette.mode === 'dark' ? (
+                colors.blueAccent[600]
+              ) : (
+                colors.primary[50]
+              )}
+            >
+              {text}
+            </Typography>
+          ))}
+          <Box 
+            display="flex"
+            mr={6}
+          >
             <IconButton onClick={colorMode.toggleColorMode}>
+              <Avatar
+                sx={{ width:32, height:32, bgcolor: colors.blueAccent[600] }}
+              >
                 {theme.palette.mode === 'dark' ? (
-                    <DarkModeOutlinedIcon />
-                ) : (
-                    <LightModeOutlinedIcon />
+                    <DarkModeOutlinedIcon style={{ color: colors.primary[50] }}/>
+                  ) : (
+                    <LightModeOutlinedIcon style={{ color: colors.primary[50] }}/>
                 )}
+              </Avatar>
             </IconButton>
           </Box>
-        </Toolbar>
-      </AppBar>
+        </Box>
+      </Box>
     </Box>
   )
 }

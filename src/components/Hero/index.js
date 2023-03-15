@@ -1,8 +1,17 @@
 import * as Unicons from '@iconscout/react-unicons'
+import { tokens } from "../../theme";
+import { useTheme, Box, Typography, Avatar, Divider, IconButton, Container } from '@mui/material';
 import Button from '@mui/material/Button';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import avatarImg from '../../assets/img-profile.jpeg'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
+import TechSkill from './TechSkill';
 
 const Hero = () => {
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
+
     const handleClickScroll = () => {
         const element = document.getElementById('about');
         if (element) {
@@ -11,41 +20,86 @@ const Hero = () => {
       };
 
     return (
-        <div id="home" name="home" className="hero-container">
-            <div className="hero-container__info-block">
-                <span className='title__span'>Full Stack Developer</span>
-                <h1 className='info-block__title'>Tomás Ríos Vargas</h1>
-                <p className='info-block__text'>Bienvenido a mi portafolio! Encuentra aquí toda la información relacionada con mi perfil como desarrollador; las tecnologías que manejo y mi experiencia en proyectos personales como Full Stack.<br></br> ¡Descarga mi CV y contáctame ahora!</p>
-                <span className='info-block__copy-title'>E-mail</span>
-                <div className='info-block__copy-box'>
-                    <p className='copy-box__text'>tomasrv123@gmail.com</p>
-                    <div className='copy-box__icon'>
-                        <Unicons.UilCopy />
-                    </div>
-                </div>
-                <div className='info-block__bottom-element'>
-                    <Button variant='contained' disableElevation onClick={handleClickScroll}>
-                        Comencemos!
-                    </Button>
-                </div>
-            </div>
-            <div className='hero-container__img-block'>
-                <div className='img-block__img'></div>
-            </div>
-            <div className='hero-container__icons'>
-                <div className='icons__block'>
-                    <Unicons.UilLinkedin />
-                </div>
-                <div className='icons__block'>
-                    <Unicons.UilGithubAlt />
-                </div>
-                <div className='icons__block'>
-                    <Unicons.UilFacebookF />
-                </div>
-                <p className='icons__text'>Medellin | Colombia</p>
-            </div>
-            
-        </div>
+        <Container
+            sx={{
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}
+        >
+            <Box
+                height='100vh'
+                display='flex'
+                flexDirection='column'
+                justifyContent='center'
+                alignItems='center'
+                pt='4rem'
+            >
+                <Box
+                    display='flex'
+                    alignItems='center'
+                    gap='4rem'
+                >
+                    <Box>
+                        <Typography
+                            variant='h2'
+                            fontWeight='600'
+                            color={colors.blueAccent[600]}
+                        >
+                            Full-Stack Developer
+                        </Typography>
+                        <Typography
+                            width={450}
+                            mt={1}
+                            color={colors.primary[400]}
+                        >
+                            Desarrollador Fullstack apasionado por crear soluciones tecnológicas innovadoras y efectivas.
+                        </Typography>
+                        <Box
+                            display='flex'
+                            gap={2}
+                            mt={3}
+                            color={colors.blueAccent[600]}
+                        >
+                            <GitHubIcon/>
+                            <LinkedInIcon/>
+                        </Box>
+                    </Box>
+                    <Box>
+                        <Avatar
+                            alt='Tomás Ríos Vargas'
+                            src={avatarImg}
+                            sx={{width: 190, height: 190}}
+                        >
+                            
+                        </Avatar>
+                    </Box>
+                </Box>
+                <Box
+                    display='flex'
+                    alignItems='center'
+                    gap='1rem'
+                    mt={9}
+                >
+                    <Typography
+                        color={colors.primary[400]}
+                    >
+                        Tech Stack
+                    </Typography>
+                    <Divider orientation='vertical' color={colors.primary[400]} />
+                    <Box
+                        display='flex'
+                        alignItems='center'
+                        gap={1.6}
+                    >
+                        {['Javascript', 'React', 'NodeJs', 'Express', 'MongoDB', 'MySQL'].map((text, index) => (
+                            <TechSkill name={text} />
+                        ))}
+                    </Box>
+                </Box>
+            </Box>
+        </Container>
     )
 }
 
