@@ -1,0 +1,13 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $p24 $p120;
+
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        gap: 40px;
+    }
+}
