@@ -1,0 +1,48 @@
+.hero__content {
+    display: flex;
+    gap: $s32;
+
+    .hero__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: $s64;
+        border-radius: $s16;
+        background-color: $colorDark--light;
+
+        .hero__line {
+            width: 100%;
+            border: 1px solid $colorPink--light;
+        }
+
+        .hero__copyEmail {
+            display: flex;
+            gap: $s16;
+            align-items: center;
+            width: fit-content;
+            border: 1px solid $colorPink--light;
+            border-radius: $s16;
+            padding: $s8 $s16;
+            background-color: $colorDark--light;
+            color: $colorPink;
+        }
+    }
+
+    .hero__side {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: $s64;
+        border: 1px solid $colorPink--light;
+        border-radius: $s16;
+        padding: $s64;
+    }
+}
+
+.hero__scroll {
+    display: flex;
+    align-items: center;
+    gap: $s8;
+    opacity: .7;
+}

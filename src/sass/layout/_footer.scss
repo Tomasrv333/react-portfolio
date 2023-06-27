@@ -1,0 +1,16 @@
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    .footer__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $s32;
+
+        .footer__span, .footer__link {
+            color: $colorPink;
+        }
+    }
+}

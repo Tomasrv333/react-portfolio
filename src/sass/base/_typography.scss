@@ -9,31 +9,28 @@ body {
 
 h1, h2, h3, h4, p, span, a {
     margin: 0;
+    font-weight: $fontRegular;
+    letter-spacing: 0.2px;
 }
 
 h1 {
     font-size: $s32;
-    font-weight: $fontMedium;
 }
 
 h2 {
     font-size: $s24;
-    font-weight: $fontMedium;
 }
 
 h3 {
     font-size: $s18;
-    font-weight: $fontMedium;
 }
 
 h4 {
     font-size: $s16;
-    font-weight: $fontMedium;
 }
 
 p {
     font-size: $s16;
-    font-weight: $fontRegular;
     margin: 0;
 }
 
@@ -49,7 +46,7 @@ a {
     color: $colorWhite;
     position: relative;
     text-decoration: none;
-    padding: 4px 0;
+    padding: 2px 0;
     font-weight: $fontRegular;
 
     &::before {

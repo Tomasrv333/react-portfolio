@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 
 // Colors
-$colorWhite: #ffffff;
-$colorDark: #1F1529;
-$colorViolet: #6101C1;
-$colorPink: #FF3DB0;
+$colorWhite: rgb(255, 255, 255);
+$colorDark: rgb(31, 21, 41);
+$colorViolet: rgb(97, 1, 193);
+$colorPink: rgb(255, 61, 177);
+
+$colorDark--light: rgb(31, 21, 41, .2);
+$colorPink--light: rgb(255, 61, 177, .2);
 
 // Sizes
 $s120: 7.5rem;
+$s96: 6rem;
 $s64: 4rem;
 $s40: 2.5rem;
 $s32: 2rem;
@@ -15,6 +19,7 @@ $s24: 1.5rem;
 $s18: 1.125rem;
 $s16: 1rem;
 $s14: 0.875rem;
+$s8: 0.5rem;
 
 // Typography
 $lineHeight: $s24;

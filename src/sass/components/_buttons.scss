@@ -1,0 +1,13 @@
+button {
+    width: fit-content;
+    font-size: $s16;
+    font-weight: $fontRegular;
+    border: none;
+    border-radius: $s16;
+    padding: $s8 $s16;
+}
+
+.button--primary {
+    color: $colorWhite;
+    background-color: $colorPink;
+}

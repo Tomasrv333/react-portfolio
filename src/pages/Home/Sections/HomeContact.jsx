@@ -2,7 +2,7 @@ import SocialMedia from "../../../components/SocialMedia"
 
 const HomeContact = () => {
   return (
-    <section className='container'>
+    <section id="contact" className='container'>
       <h2 className="contact__title">Contact</h2>
       <div className="contact__content">
         <article>
