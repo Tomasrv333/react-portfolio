@@ -2,10 +2,11 @@
 @import "./sass/base/index";
 @import "./sass/components/index";
 @import "./sass/layout/index";
+@import "./sass/pages/index";
 
 body {
-  font-family: 'Raleway';
   margin: 0;
+  background-color: $colorDark;
 }
 
 // :root {

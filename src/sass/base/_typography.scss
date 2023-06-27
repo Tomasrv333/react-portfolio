@@ -1,10 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+@use '../abstracts/variables';
 
-h1, h2, h3 {
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: $lineHeight;
+    font-size: $s16;
+    color: $colorWhite;
+}
+
+h1, h2, h3, h4, p, span, a {
     margin: 0;
 }
 
+h1 {
+    font-size: $s32;
+    font-weight: $fontMedium;
+}
+
+h2 {
+    font-size: $s24;
+    font-weight: $fontMedium;
+}
+
+h3 {
+    font-size: $s18;
+    font-weight: $fontMedium;
+}
+
+h4 {
+    font-size: $s16;
+    font-weight: $fontMedium;
+}
+
 p {
-    font-size: 16px;
+    font-size: $s16;
+    font-weight: $fontRegular;
     margin: 0;
+}
+
+span {
+    font-size: $s14;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: $colorWhite;
+    position: relative;
+    text-decoration: none;
+    padding: 4px 0;
+    font-weight: $fontRegular;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        border-radius: 1px;
+        background-color: $colorPink;
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+    }
+
+    &:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
 }

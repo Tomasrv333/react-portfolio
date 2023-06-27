@@ -1,8 +1,36 @@
-import React from 'react'
+import ProjectCard from "../../../components/ProjectCard"
 
 const HomeProjects = () => {
   return (
-    <div>HomeProjects</div>
+    <section className='container'>
+      <div className="projects__content">
+        <h2 className="projects__title">My Projects</h2>
+        <ProjectCard
+          img=""
+          alt=""
+          description=""
+          title=""
+          deploy=""
+          reposity=""
+        />
+        <ProjectCard
+          img=""
+          alt=""
+          description=""
+          title=""
+          deploy=""
+          reposity=""
+        />
+        <ProjectCard
+          img=""
+          alt=""
+          description=""
+          title=""
+          deploy=""
+          reposity=""
+        />
+      </div>
+    </section>
   )
 }
 

@@ -1,2 +1,25 @@
-$p120: 7.5rem;
-$p24: 1.5rem;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+// Colors
+$colorWhite: #ffffff;
+$colorDark: #1F1529;
+$colorViolet: #6101C1;
+$colorPink: #FF3DB0;
+
+// Sizes
+$s120: 7.5rem;
+$s64: 4rem;
+$s40: 2.5rem;
+$s32: 2rem;
+$s24: 1.5rem;
+$s18: 1.125rem;
+$s16: 1rem;
+$s14: 0.875rem;
+
+// Typography
+$lineHeight: $s24;
+$fontLight: 300;
+$fontRegular: 400;
+$fontMedium: 500;
+$fontSemiBold: 600;
+$fontBold: 800;

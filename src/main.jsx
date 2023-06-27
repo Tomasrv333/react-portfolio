@@ -7,18 +7,19 @@ import Projects from './pages/Projects/Projects.jsx'
 import Blog from './pages/Blog/Blog.jsx'
 import NoPage from './pages/NoPage.jsx'
 import './index.scss'
+import Footer from './layouts/Footer.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
+      <Header/>
       <Routes>
-        <Route path='/' element={<Header/>}>
-          <Route index element={<Home/>} />
-          <Route path='projects' element={<Projects/>} />
-          <Route path='blog' element={<Blog/>} />
-          <Route path='*' element={<NoPage/>} />
-        </Route>
+        <Route exact path='/' element={<Home/>} />
+        <Route exact path='projects' element={<Projects/>} />
+        <Route exact path='blog' element={<Blog/>} />
+        <Route exact path='*' element={<NoPage/>} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   </React.StrictMode>,
 )

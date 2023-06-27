@@ -1,14 +1,15 @@
-import { HomeHero, HomeWhatIDo, HomeProjects, HomeBlog, HomeContact } from './Sections/index';
+import { HomeHero, HomeWhatIDo, HomeProjects, HomeBlog, HomeContact, HomeAbout } from './Sections/index';
 
 const Home = () => {
   return (
-    <>
+    <main>
       <HomeHero/>
       <HomeWhatIDo/>
       <HomeProjects/>
+      <HomeAbout/>
       <HomeBlog/>
       <HomeContact/>
-    </>
+    </main>
   )
 }
 
