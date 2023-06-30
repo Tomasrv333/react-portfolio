@@ -1,0 +1,40 @@
+.project__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s64;
+    align-items: center;
+    background-color: $colorDark--light;
+    padding: $s64;
+    border-radius: $s16;
+}
+
+.project__info-content {
+    display: flex;
+    flex-direction: column;
+    gap: $s24;
+
+    .project__description {
+        font-size: $s18;
+    }
+
+    .project__title-frame {
+        display: flex;
+        gap: $s8;
+
+        span, p {
+            color: $colorPink;
+        }
+    }
+
+    .projects__link-frame {
+        display: flex;
+        gap: $s16;
+        align-items: center;
+    }
+}
+
+.project__img-content {
+    img {
+        max-height: 460px;
+    }
+}

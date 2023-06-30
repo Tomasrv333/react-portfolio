@@ -1,0 +1,19 @@
+.blog-card__content {
+    max-height: 276px;
+    background-color: $colorDark--light;
+    border-radius: $s16;
+    overflow: hidden;
+
+    .blog-card__img {
+        height: 144px;
+        background-color: aliceblue;
+    }
+
+    .blog-card__text {
+        padding: $s32 $s24;
+
+        span {
+            color: $colorPink;
+        }
+    }
+}

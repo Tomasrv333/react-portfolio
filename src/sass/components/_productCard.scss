@@ -1,0 +1,23 @@
+.product__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $s18;
+    text-align: center;
+    border: 1px solid $colorPink--light;
+    border-radius: $s16;
+    padding: $s32 40px;
+
+    .product__img {
+        width: $s120;
+    }
+
+    .product__title {
+        color: $colorPink;
+    }
+
+    .product__description {
+        font-size: $s14;
+        letter-spacing: 0.056px;
+    }
+}

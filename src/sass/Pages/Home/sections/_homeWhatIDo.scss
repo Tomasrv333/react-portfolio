@@ -1,0 +1,12 @@
+.whatIDo__content {
+    background-color: $colorDark--light;
+    padding: $s64;
+    border-radius: $s16;
+
+    .whatIDo__cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: $s24;
+    }
+}

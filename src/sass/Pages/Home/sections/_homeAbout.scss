@@ -1,0 +1,87 @@
+.about__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $s32;
+
+    h3 {
+        color: $colorPink;
+        text-align: center;
+    }
+
+    .focus__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $s16;
+    }
+
+    .focus__frame {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: $s24;
+        background-color: $colorDark--light;
+        padding: $s24;
+        border-radius: $s16;
+
+        .focus__frame-top {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: $colorPink;
+            text-align: center;
+            padding: $s32 $s24;
+            border-radius: $s16;
+            background: linear-gradient(225deg, rgba(255, 61, 176, 0.02) 0%, rgba(255, 61, 176, 0.18) 100%);
+        }
+
+        .focus__frame-list {
+            display: flex;
+            flex-direction: column;
+            gap: $s8;
+        }
+    }
+
+    .about__skill-content {
+        display: flex;
+        flex-direction: column;
+        gap: $s16;
+
+        .about__skill-frame {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background-color: $colorDark--light;
+            padding: $s24;
+            padding-bottom: 28px;
+            border-radius: $s16;
+        }
+
+        .about__skill-frame--vertical {
+            grid-template-columns: repeat(5, 1fr);
+            padding: 21px $s24;
+        }
+
+        .skill__list {
+            display: flex;
+            flex-direction: column;
+            gap: $s24;
+
+            &:last-child {
+                padding-left: $s24;
+                border-left: 1px solid $colorPink--light;
+            }
+        }
+    }
+
+    .about__education-content {
+        display: flex;
+        flex-direction: column;
+        gap: $s16;
+    }
+
+    .about__education-cards {
+        display: flex;
+        flex-direction: column;
+        gap: $s16;
+    }
+}

@@ -1,0 +1,12 @@
+input, textarea {
+    border-radius: $s16;
+    border: 1px solid $colorPink--light;
+    background-color: $colorDark--light;
+    padding: $s14 $s18;
+    font-size: $s16;
+    color: $colorWhite;
+}
+
+input {
+    max-height: 45px;
+}

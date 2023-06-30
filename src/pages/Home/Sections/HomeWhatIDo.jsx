@@ -4,8 +4,8 @@ import LogoWebsites from "../../../assets/ImageProfile.svg"
 const HomeWhatIDo = () => {
   return (
     <section className='container'>
+      <h2 className="whatIDo__title">What I Do</h2>
       <div className="whatIDo__content">
-        <h2 className="whatIDo__title">What I Do</h2>
         <div className="whatIDo__cards">
           <ProductCard
             img={LogoWebsites}
@@ -32,6 +32,7 @@ const HomeWhatIDo = () => {
             description="Update, performance, security, correctness, scalability, monitoring."
           />
         </div>
+        
       </div>
     </section>
   )

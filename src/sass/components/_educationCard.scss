@@ -1,0 +1,16 @@
+.education-card__content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: $colorDark--light;
+    padding: $s24;
+    border-radius: $s16;
+
+    h4 {
+        color: $colorPink;
+    }
+
+    p {
+        font-size: $s14;
+    }
+}

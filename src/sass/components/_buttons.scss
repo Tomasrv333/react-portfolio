@@ -1,13 +1,20 @@
 button {
+    cursor: pointer;
     width: fit-content;
     font-size: $s16;
     font-weight: $fontRegular;
     border: none;
     border-radius: $s16;
-    padding: $s8 $s16;
+    padding: $s14 $s24;
+    transition: ease-out .4s;
+
+    &:hover, &:focus {
+        box-shadow: inset 400px 0 0 0 $colorPink;    
+    }
 }
 
 .button--primary {
     color: $colorWhite;
-    background-color: $colorPink;
+    border: 1px solid $colorPink;
+    background-color: transparent;
 }

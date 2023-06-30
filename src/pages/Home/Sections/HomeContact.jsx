@@ -1,5 +1,5 @@
 import SocialMedia from "../../../components/SocialMedia"
-
+import ContactFigure from '../../../assets/ContactFigure.svg'
 const HomeContact = () => {
   return (
     <section id="contact" className='container'>
@@ -8,60 +8,52 @@ const HomeContact = () => {
         <article>
           <p>Lets connect to bring your digital vision to life! Together, we can build web solutions that drive your business towards success.</p>
           <div>
-            <h3>My networks</h3>
+            <h4>My networks</h4>
             <SocialMedia/>
           </div>
+          <img src={ContactFigure} alt="" />
         </article>
-        <form action="">
+        <form id="form__contact" action="">
           <div className="form__info">
-            <div>
-              <div>
+            <div className="form__info-frame">
+              <div className="form__info-input">
                 <label htmlFor="name">Name*</label>
                 <input type="text" id="name" name="name" required/>
               </div>
-              <div>
+              <div className="form__info-input">
                 <label htmlFor="email">Email*</label>
                 <input type="email" id="email" name="email" required/>
               </div>
-              <div>
+              <div className="form__info-input">
                 <label htmlFor="phone">Phone</label>
                 <input type="tel" id="phone" name="phone"/>
               </div>
             </div>
             <div>
-              <div>
+              <div className="form__info-textarea">
                   <label htmlFor="message">Message*</label>
                   <textarea id="message" name="message" required/>
               </div>
             </div>
           </div>
-          <div>
-            <div>
-              <input 
-                type="radio" 
-                name="service"
-                value='Web Design'
-              />
-              <label htmlFor="">Web Design</label>
-            </div>
-            <div>
-              <input 
-                type="radio" 
-                name="service"
-                value='Web Development'
-              />
-              <label htmlFor="">Web Development</label>
-            </div>
-            <div>
-              <input 
-                type="radio" 
-                name="service"
-                value='Other'
-              />
-              <label htmlFor="">Other</label>
+          <div className="form__services-content">
+            <h4>Services</h4>
+            <div className="form__services-frame">
+              <div>
+                <input type="radio" name="services" id="web-design"/>
+                <label htmlFor="web-design">Web Design</label>
+              </div>
+              <div>
+                <input type="radio" name="services" id="web-app"/>
+                <label htmlFor="web-app">Web Application</label>
+              </div>
+              <div>
+                <input type="radio" name="services" id="other"/>
+                <label htmlFor="other">Other</label>
+              </div>
             </div>
           </div>
-          <button>
+          <button className="button--primary">
             Send Message
           </button>
         </form>

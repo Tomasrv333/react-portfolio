@@ -1,0 +1,116 @@
+#contact {
+    background-color: $colorDark--light;
+}
+
+.contact__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $s32;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $s24;
+        text-align: center;
+        border: 1px solid $colorPink--light;
+        border-radius: $s16;
+        padding: $s64;
+
+        h4 {
+            color: $colorPink;
+        }
+
+        img {
+            max-width: 76%;
+        }
+    }
+}
+
+#form__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $s32;
+    border-radius: $s16;
+    background-color: $colorWhite--light;
+    padding: $s64;
+
+    .form__info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $s32;
+
+        label {
+            color: $colorPink;
+        }
+
+        .form__info-frame {
+            display: flex;
+            flex-direction: column;
+            gap: $s16;
+        }
+
+        .form__info-input {
+            display: flex;
+            flex-direction: column;
+            gap: $s8;
+        }
+
+        .form__info-textarea {
+            display: flex;
+            flex-direction: column;
+            gap: $s8;
+            height: 100%;
+        }
+
+        #message {
+            height: 100% !important;
+        }
+    }
+}
+
+.form__services-content {
+    display: flex;
+    flex-direction: column;
+    gap: $s8;
+
+    h4 {
+        color: $colorPink;
+    }
+
+    .form__services-frame {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $s24;
+
+        label {
+            cursor: pointer;
+            display: flex;
+            height: $s64;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: $s16;
+            border: 1px solid $colorPink--light;
+            border-radius: $s16;
+            transition: .2s;
+
+            &:hover {
+                background-color: $colorPink--light;
+            }
+        }
+
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+        }
+
+        input[type="radio"]:checked + label {
+            background-color: $colorPink--light;
+        }
+    }
+}
+
