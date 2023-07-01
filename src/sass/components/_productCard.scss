@@ -7,9 +7,10 @@
     border: 1px solid $colorPink--light;
     border-radius: $s16;
     padding: $s32 40px;
+    transition: .4s;
 
     .product__img {
-        width: $s120;
+        height: $s120;
     }
 
     .product__title {
@@ -19,5 +20,9 @@
     .product__description {
         font-size: $s14;
         letter-spacing: 0.056px;
+    }
+
+    &:hover {
+        background-color: $colorPink--light;
     }
 }

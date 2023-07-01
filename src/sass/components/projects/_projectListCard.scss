@@ -1,0 +1,50 @@
+.projectListCard__content {
+    width: 100%;
+    border: 1px solid $colorPink--light;
+    border-radius: $s16;
+    overflow: hidden;
+
+    .projectListCard__img {
+        height: 160px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 24rem;
+    }
+}
+
+.projectListCard__info {
+    display: flex;
+    flex-direction: column;
+    gap: $s8;
+    padding: $s24;
+    background-color: $colorPink--light;
+
+    .projectListCard__category {
+        color: $colorPink;
+    }
+
+    .projectListCard__links {
+        display: flex;
+        justify-content: space-between;
+        gap: $s16;
+
+        button {
+            width: 100%;
+        }
+
+        a {
+            min-width: 42px;
+            height: 40px;
+            border: 1px solid $colorPink;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .4s;
+
+            &:hover {
+                background-color: $colorPink;
+            }
+        }
+    }
+}

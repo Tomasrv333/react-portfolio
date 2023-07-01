@@ -21,7 +21,7 @@ import OfficeIcon from '../../../assets/Icons/languages/Office.svg'
 
 const HomeAbout = () => {
   return (
-    <section className="container">
+    <section id="about" className="container">
         <h2 className="about__title">About</h2>
         <div className="about__content">  
             <article className="focus__content">

@@ -1,0 +1,44 @@
+.projects__header-layout {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .projects__title {
+        display: flex;
+        align-items: center;
+        gap: $s16;
+    
+        a {
+            color: $colorPink;
+            display: flex;
+            align-items: center;
+            gap: $s8;
+        }
+    
+        span {
+            color: $colorPink;
+        }
+    }
+
+    .projects__sortBy {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: $s16;
+
+        select {
+            border-radius: $s16;
+            border: 1px solid $colorPink--light;
+            background-color: transparent;
+            color: $colorWhite;
+            padding: $s8 $s16;
+        }
+    }
+}
+
+.projects__content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $s24;
+}

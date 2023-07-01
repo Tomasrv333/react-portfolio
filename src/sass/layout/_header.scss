@@ -2,7 +2,8 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    background: linear-gradient(0deg, rgba(31, 21, 41, 0.00) 0%, rgba(31, 21, 41, 0.90) 62.50%);
+    background-color: $colorDark;
+    z-index: 10;
 
     .header__content {
         display: flex;

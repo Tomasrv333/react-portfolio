@@ -23,17 +23,38 @@
 }
 
 .top-content__info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: $colorDark--light;
     border-radius: $s16;
     padding: $s24;
+    gap: $s16;
 
     .top-content__text {
         display: flex;
         flex-direction: column;
         gap: $s16;
     }
+
+    .top-content__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $s32;
+        align-items: center;
+
+        .top-content__img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    
 
     h3 {
         color: $colorPink;

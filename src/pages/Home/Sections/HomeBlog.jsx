@@ -1,9 +1,10 @@
 import BlogCard from "../../../components/BlogCard";
 import { FaArrowRight } from "react-icons/fa";
+import BlogFigure from '../../../assets/BlogFigure.svg'
 
 const HomeBlog = () => {
   return (
-    <section className="container">
+    <section id="blog" className="container">
       <h2 className="blog__title">My Blog</h2>
       <div className="blog__content">
         <div className="blog__top-content">
@@ -11,17 +12,18 @@ const HomeBlog = () => {
 
           </div>
           <article className="top-content__info">
-            <div className="top-content__text">
-              <h3>Follow me</h3>
-              <p>I am also a content creator, remember to check my different channels</p>
-              <p>Get notified every time I upload a new article to my blog so you can be the first to check it out.</p>
-              <form id="form__blog" action="">
-                <input type="email" placeholder="example@email.com" />
-                <button className="button--primary">Subscribe</button>
-              </form>
-            </div>
-            <div>
-
+            <h3>Follow me</h3>
+            <div className="top-content__grid">
+              <div className="top-content__text">
+                <p>Get notified every time I upload a new article to my blog so you can be the first to check it out.</p>
+                <form id="form__blog" action="">
+                  <input type="email" placeholder="example@email.com" />
+                  <button className="button--primary">Subscribe</button>
+                </form>
+              </div>
+              <div className="top-content__img">
+                <img src={BlogFigure} alt="Gunter" />
+              </div>
             </div>
           </article>
         </div>
