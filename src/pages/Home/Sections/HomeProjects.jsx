@@ -5,7 +5,7 @@ const HomeProjects = () => {
   return (
     <section id="projects" className='container'>
       <h2 className="projects__title">My Projects</h2>
-      <div className="projectsCards__content">
+      <div className="projectsHomeCards__content">
         <ProjectCard
           img=""
           alt=""

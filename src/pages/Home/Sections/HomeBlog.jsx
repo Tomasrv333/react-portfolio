@@ -54,7 +54,7 @@ const HomeBlog = () => {
           />
         </div>
         <div className="more-frame">
-          <a href="" className="more-link">View All <FaArrowRight size={14}/></a>
+          <a href="/blog" className="more-link">View All <FaArrowRight size={14}/></a>
         </div>
       </div>
     </section>

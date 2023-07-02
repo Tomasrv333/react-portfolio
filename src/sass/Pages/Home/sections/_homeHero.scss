@@ -1,12 +1,15 @@
 .hero__content {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: $s32;
 
     .hero__info {
         display: flex;
+        grid-column: span 2;
         flex-direction: column;
         justify-content: space-between;
         padding: $s64;
+        gap: $s24;
         border-radius: $s16;
         background-color: $colorDark--light;
 
@@ -29,14 +32,19 @@
     }
 
     .hero__side {
+        width: 100%;
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         gap: $s64;
         border: 1px solid $colorPink--light;
         border-radius: $s16;
-        padding: $s64;
+        padding: $s64 $s32;
+
+        .hero__img {
+            margin: 0 auto;
+        }
     }
 }
 

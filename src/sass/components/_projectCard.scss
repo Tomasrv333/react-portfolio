@@ -1,7 +1,9 @@
 .projectsHomeCard__content {
+    width: 100%;
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: $s64;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 4%;
     align-items: center;
     background-color: $colorDark--light;
     padding: $s64;
@@ -16,6 +18,7 @@
 }
 
 .projectsHomeCard__info-content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: $s24;
@@ -41,7 +44,9 @@
 }
 
 .projectsHomeCard__img-content {
+    width: 100%;
+    
     img {
-        max-height: 460px;
+        width: 100%;
     }
 }

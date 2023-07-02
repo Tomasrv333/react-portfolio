@@ -1,6 +1,17 @@
 import SocialMedia from "../../../components/SocialMedia"
 import ContactFigure from '../../../assets/ContactFigure.svg'
+import { useState } from "react"
 const HomeContact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+  }
+
   return (
     <section id="contact" className='container'>
       <h2 className="contact__title">Contact</h2>
@@ -13,16 +24,16 @@ const HomeContact = () => {
           </div>
           <img src={ContactFigure} alt="" />
         </article>
-        <form id="form__contact" action="">
+        <form id="form__contact" onSubmit={handleSubmit}>
           <div className="form__info">
             <div className="form__info-frame">
               <div className="form__info-input">
                 <label htmlFor="name">Name*</label>
-                <input type="text" id="name" name="name" required/>
+                <input type="text" id="name" name="name" onChange={(e) => setName(e.target.value)} required/>
               </div>
               <div className="form__info-input">
                 <label htmlFor="email">Email*</label>
-                <input type="email" id="email" name="email" required/>
+                <input type="email" id="email" name="email" onChange={(e) => setEmail(e.target.value)} required/>
               </div>
               <div className="form__info-input">
                 <label htmlFor="phone">Phone</label>
@@ -53,7 +64,7 @@ const HomeContact = () => {
               </div>
             </div>
           </div>
-          <button className="button--primary">
+          <button type="submit" className="button--primary">
             Send Message
           </button>
         </form>

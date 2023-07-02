@@ -1,23 +1,26 @@
 .blog__content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: $s32;
 
     .blog__top-content {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         gap: $s32;
     }
 
     .blog__cards-content {
         height: fit-content !important;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: $s32;
     }
 }
 
 .top-content__video {
+    width: 100%;
+    height: 100%;
     background-color: $colorWhite;
     border-radius: $s16;
 }
