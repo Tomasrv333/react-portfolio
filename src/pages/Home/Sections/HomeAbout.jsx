@@ -1,6 +1,6 @@
 import EducationCard from "/src/components/EducationCard"
 import TechSkill from "/src/components/TechSkill"
-import FocusCheck from "/src/components/homeAbout/focusCheck"
+import FocusCheck from "/src/components/homeAbout/FocusCheck.jsx"
 import JavascriptIcon from '/src/assets/Icons/languages/Javascript.svg'
 import PythonIcon from '/src/assets/Icons/languages/Python.svg'
 import RubyIcon from '/src/assets/Icons/languages/Ruby.svg'
