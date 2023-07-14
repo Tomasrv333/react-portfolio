@@ -1,8 +1,8 @@
-@import "./sass/abstracts/index.scss";
-@import "./sass/base/index.scss";
-@import "./sass/components/index.scss";
-@import "./sass/layout/index.scss";
-@import "./sass/pages/index.scss";
+@import "/src/sass/abstracts/index";
+@import "/src/sass/base/index.scss";
+@import "/src/sass/components/index.scss";
+@import "/src/sass/layout/index.scss";
+@import "/src/sass/pages/index.scss";
 
 html {
   scroll-behavior: smooth;
