@@ -1,5 +1,4 @@
-import { FaGithub } from 'react-icons/fa'
-import ImgProject from '../assets/ProjectImg.svg'
+import { FaGithub, FaFigma } from 'react-icons/fa'
 
 const ProjectCard = (props) => {
   return (
@@ -13,11 +12,16 @@ const ProjectCard = (props) => {
         </div>
         <div className="projectsHomeCard__link-frame">
           <button className="projectsHomeCard__button button--primary">Try Now</button>
-          <FaGithub size={24} />
+          <a target='_blank' href={props.repository}><FaGithub size={24} /></a>
+          <a target='_blank' href={props.figma}><FaFigma size={24} /></a>
         </div>
       </div>
       <div className="projectsHomeCard__img-content">
-        <img src={ImgProject} alt="web application" />
+        <div className='projectsHomeCard__img'
+          style={{
+            backgroundImage: `url(${props.img})`
+          }}
+        ></div>
       </div>
     </article>
   )

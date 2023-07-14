@@ -45,8 +45,29 @@
 
 .projectsHomeCard__img-content {
     width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    border: 1px solid $colorPink;
+    padding: $s8;
+    border-radius: $s16;
+    overflow: hidden;
+    transition: .4s;
+
+    &:hover {
+        background-color: $colorPink--light;
+    }
     
-    img {
+    .projectsHomeCard__img {
         width: 100%;
+        height: 320px;
+        border-radius: $s16;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 1.6s;
+
+        &:hover {
+            background-position: bottom;
+        }
     }
 }
