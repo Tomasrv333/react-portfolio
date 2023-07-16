@@ -2,7 +2,7 @@
 @import "/src/sass/base/_index.scss";
 @import "/src/sass/components/_index.scss";
 @import "/src/sass/layout/_index.scss";
-@import "/src/sass/pages/_index.scss";
+@use "/src/sass/pages/_index.scss";
 
 html {
   scroll-behavior: smooth;
