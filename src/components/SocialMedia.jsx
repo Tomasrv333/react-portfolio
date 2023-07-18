@@ -1,5 +1,5 @@
 import IconYoutube from '../assets/Icons/socialMedia/YouTube.svg';
-import IconLinkedin from '../assets/Icons/socialMedia/Linkedin.svg';
+import IconLinkedin from '../assets/Icons/socialMedia/LinkedIn.svg';
 import IconGithub from '../assets/Icons/socialMedia/Github.svg';
 import IconFacebook from '../assets/Icons/socialMedia/Facebook.svg';
 import IconTelegram from '../assets/Icons/socialMedia/Telegram.svg';
