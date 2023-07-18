@@ -7,7 +7,7 @@ const Home = () => {
       <HomeWhatIDo/>
       <HomeProjects/>
       <HomeAbout/>
-      <HomeBlog/>
+      {/* <HomeBlog/> */}
       <HomeContact/>
     </main>
   )
