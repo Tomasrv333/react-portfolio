@@ -10,6 +10,10 @@ header {
         align-items: center;
         justify-content: space-between;
         padding: $s24 $s120;
+
+        @include for-tablet-portrait-up {
+            padding: $s24 $s64;
+        }
     }
 
     .header__title {
