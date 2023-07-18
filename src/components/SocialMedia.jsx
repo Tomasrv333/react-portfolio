@@ -1,9 +1,9 @@
-import IconYoutube from '../../src/assets/Icons/socialMedia/Youtube.svg';
-import IconLinkedin from '../../src/assets/Icons/socialMedia/Linkedin.svg';
-import IconGithub from '../../src/assets/Icons/socialMedia/Github.svg';
-import IconFacebook from '../../src/assets/Icons/socialMedia/Facebook.svg';
-import IconTelegram from '../../src/assets/Icons/socialMedia/Telegram.svg';
-import IconDiscord from '../../src/assets/Icons/socialMedia/Discord.svg';
+import IconYoutube from '../src/assets/Icons/socialMedia/Youtube.svg';
+import IconLinkedin from '../src/assets/Icons/socialMedia/Linkedin.svg';
+import IconGithub from '../src/assets/Icons/socialMedia/Github.svg';
+import IconFacebook from '../src/assets/Icons/socialMedia/Facebook.svg';
+import IconTelegram from '../src/assets/Icons/socialMedia/Telegram.svg';
+import IconDiscord from '../src/assets/Icons/socialMedia/Discord.svg';
 
 const SocialMedia = () => {
   return (
