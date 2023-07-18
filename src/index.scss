@@ -19,6 +19,10 @@ body {
   align-items: center;
   gap: $s64;
   padding: $s96 $s120;
+
+  @include for-tablet-portrait-up {
+    padding: $s96 $s64;
+  }
 }
 
 // :root {
