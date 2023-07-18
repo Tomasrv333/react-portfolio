@@ -1,4 +1,4 @@
-import IconYoutube from '../../src/assets/Icons/socialMedia/Youtube';
+import IconYoutube from '../../src/assets/Icons/socialMedia/Youtube.svg';
 import IconLinkedin from '../../src/assets/Icons/socialMedia/Linkedin.svg';
 import IconGithub from '../../src/assets/Icons/socialMedia/Github.svg';
 import IconFacebook from '../../src/assets/Icons/socialMedia/Facebook.svg';
