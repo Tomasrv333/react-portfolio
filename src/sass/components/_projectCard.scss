@@ -8,6 +8,19 @@
     background-color: $colorDark--light;
     padding: $s64;
     border-radius: $s16;
+
+    @include for-phone-only {
+        gap: $s32;
+        padding: $s32;
+        background-color: $colorDark--light;
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+
+        .projectsHomeCard__info-content {
+            order: 2;
+        }
+    }
 }
 
 .projectsHomeCard__content--secondary {
@@ -23,8 +36,17 @@
     flex-direction: column;
     gap: $s24;
 
+    @include for-phone-only {
+        box-sizing: border-box;
+        align-items: center;
+    }
+
     .projectsHomeCard__description {
         font-size: $s18;
+
+        @include for-phone-only {
+            display: none;
+        }
     }
 
     .projectsHomeCard__title-frame {
@@ -68,6 +90,10 @@
 
         &:hover {
             background-position: bottom;
+        }
+
+        @include for-phone-only {
+            height: 260px;
         }
     }
 }

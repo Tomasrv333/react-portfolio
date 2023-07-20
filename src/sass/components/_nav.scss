@@ -6,4 +6,8 @@ nav {
         gap: $s64;
         margin: 0;
     }
+
+    @include for-phone-only {
+        display: none;
+    }
 }

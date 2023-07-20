@@ -6,7 +6,7 @@ import MaintenanceIcon from "../../../assets/whatIDo/Maintenance.svg"
 
 const HomeWhatIDo = () => {
   return (
-    <section className='container'>
+    <section id="whatIDo" className='container'>
       <h2 className="whatIDo__title">What I Do</h2>
       <div className="whatIDo__content">
         <div className="whatIDo__cards">

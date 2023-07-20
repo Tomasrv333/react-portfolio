@@ -1,7 +1,12 @@
 .hero__content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: $s32;
+    column-gap: $s32;
+
+    @include for-phone-only {
+        column-gap: 0;
+        row-gap: $s24;
+    }
 
     .hero__info {
         display: flex;
@@ -13,9 +18,38 @@
         border-radius: $s16;
         background-color: $colorDark--light;
 
+        @include for-phone-only {
+            padding: $s64 0;
+            background-color: transparent;
+        }
+
+        .hero__span {
+            @include for-phone-only {
+                text-align: center;
+                color: $colorPink;
+            }
+        }
+
+        .hero__title {
+            @include for-phone-only {
+                text-align: center;
+                line-height: 2rem;
+            }
+        }
+
         .hero__line {
             width: 100%;
             border: 1px solid $colorPink--light;
+
+            @include for-phone-only {
+                width: 60%;
+            }
+        }
+
+        .hero__description {
+            @include for-phone-only {
+                text-align: center;
+            }
         }
 
         .hero__copyEmail {
@@ -28,6 +62,16 @@
             padding: $s8 $s16;
             background-color: $colorDark--light;
             color: $colorPink;
+
+            @include for-phone-only {
+                margin: 0 auto;
+            }
+        }
+
+        .hero__btn {
+            @include for-phone-only {
+                margin: 0 auto;
+            }
         }
     }
 
@@ -44,6 +88,11 @@
 
         .hero__img {
             margin: 0 auto;
+        }
+
+        @include for-phone-only {
+            gap: $s32;
+            padding: $s32;
         }
     }
 }

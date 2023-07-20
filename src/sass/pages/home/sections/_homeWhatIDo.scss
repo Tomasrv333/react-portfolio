@@ -1,9 +1,17 @@
+#whatIDo {
+    border-top: 1px solid $colorPink--light;
+}
+
 .whatIDo__content {
     width: 100%;
     box-sizing: border-box;
     background-color: $colorDark--light;
     padding: $s64;
     border-radius: $s16;
+
+    @include for-phone-only {
+        padding: $s32;
+    }
 
     .whatIDo__cards {
         display: grid;

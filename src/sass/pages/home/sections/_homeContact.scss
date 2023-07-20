@@ -19,6 +19,10 @@
         border-radius: $s16;
         padding: $s64;
 
+        @include for-phone-only {
+            padding: $s32;
+        }
+
         h4 {
             color: $colorPink;
         }
@@ -40,10 +44,19 @@
     background-color: $colorWhite--light;
     padding: $s64;
 
+    @include for-phone-only {
+        padding: $s32;
+    }
+
     .form__info {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: $s32;
+
+        @include for-phone-only {
+            width: 100%;
+            grid-template-columns: none;
+        }
 
         label {
             color: $colorPink;
@@ -79,6 +92,10 @@
     flex-direction: column;
     gap: $s8;
 
+    @include for-phone-only {
+        width: 100%;
+    }
+
     h4 {
         color: $colorPink;
     }
@@ -88,6 +105,11 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: $s24;
+
+        @include for-phone-only {
+            display: flex;
+            flex-direction: column;
+        }
 
         label {
             cursor: pointer;
@@ -103,6 +125,12 @@
 
             &:hover {
                 background-color: $colorPink--light;
+            }
+
+            @include for-phone-only {
+                width: 100%;
+                height: $s32;
+                padding: $s16 0;
             }
         }
 
