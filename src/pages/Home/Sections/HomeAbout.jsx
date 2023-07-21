@@ -82,6 +82,9 @@ const HomeAbout = () => {
                             variant="horizontal"
                         />
                     </div>
+                    <div className="skill__line">
+
+                    </div>
                     <div className="skill__list">
                         <TechSkill
                             icon={DjangoIcon}

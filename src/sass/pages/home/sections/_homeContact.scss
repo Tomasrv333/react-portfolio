@@ -5,8 +5,15 @@
 .contact__content {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: $s32;
+
+    @include for-phone-only {
+        grid-template-columns: 1fr;
+    }
+
+    @include for-tablet-landscape-up {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     article {
         width: 100%;
@@ -45,7 +52,7 @@
     padding: $s64;
 
     @include for-phone-only {
-        padding: $s32;
+        padding: $s16;
     }
 
     .form__info {
