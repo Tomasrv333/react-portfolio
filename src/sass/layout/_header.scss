@@ -21,7 +21,19 @@ header {
     }
 
     .header__title {
-        color: $colorPink;
+        color: $colorWhite;
+        display: flex;
+        align-items: center;
+        gap: $s8;
+
+        img {
+            width: 32px;
+        }
+
+        @include for-phone-only {
+
+            
+        }
     }
 
     .header__icon {

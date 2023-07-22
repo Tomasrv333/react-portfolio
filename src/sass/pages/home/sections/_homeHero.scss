@@ -19,23 +19,28 @@
         background-color: $colorDark--light;
 
         @include for-phone-only {
-            padding: 0;
-            padding-right: $s32;
-            border-radius: 0;
+            padding: $s32;
             background-color: transparent;
-            border-right: 1px solid $colorPink--light;
+            border: 1px solid $colorPink--light;
+        }
+
+        img {
+            width: 60%;
+            margin: 0 auto;
         }
 
         .hero__span {
             @include for-phone-only {
                 color: $colorPink;
+                margin: 0 auto;
             }
         }
 
         .hero__title {
             display: flex;
             flex-direction: column;
-            gap: $s8;
+            gap: 0;
+            text-align: center;
 
             @include for-phone-only {
                 line-height: 2rem;
@@ -44,7 +49,7 @@
             }
 
             span {
-                font-size: $s32;
+                font-size: $s16;
                 padding-bottom: $s8;
                 color: $colorPink;
             }
@@ -61,12 +66,14 @@
 
         .hero__description {
             @include for-phone-only {
-                padding-right: $s8;
+                text-align: center;
+                font-size: $s14;
             }
         }
 
         .hero__btn {
             @include for-phone-only {
+                margin: 0 auto;
             }
         }
     }
@@ -87,9 +94,9 @@
         }
 
         @include for-phone-only {
+            padding: $s32;
             gap: $s16;
-            padding-top: $s32;
-            padding-left: $s32;
+            border: none;
             background-color: $colorDark--light;
         }
 

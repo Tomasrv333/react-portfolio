@@ -13,4 +13,16 @@
     p {
         font-size: $s14;
     }
+
+    @include for-phone-only {
+        flex-direction: column;
+        gap: $s16;
+
+        p {
+            width: fit-content;
+            padding: $s8 $s16;
+            border-radius: $s16;
+            border: 1px solid $colorPink--light;
+        }
+    }
 }

@@ -11,11 +11,10 @@
 
     @include for-phone-only {
         padding: 0;
-        background-color: $colorDark--light;
+        background-color: $colorWhite--light;
         display:flex;
         flex-direction: column;
         text-align: center;
-        border: 1px solid $colorPink--light;
         overflow: hidden;
 
         .projectsHomeCard__info-content {
@@ -43,6 +42,8 @@
 
     @include for-phone-only {
         box-sizing: border-box;
+        border: 1px solid $colorPink--light;
+        border-radius: 0 0 16px 16px;
     }
 
     .projectsHomeCard__description {
@@ -56,9 +57,24 @@
     .projectsHomeCard__title-frame {
         display: flex;
         gap: $s8;
+        text-align: start;
 
         span, p {
             color: $colorPink;
+        }
+
+        @include for-phone-only {
+            gap: 0;
+            flex-direction: column;
+            justify-content: start;
+
+            span {
+                display: none;
+            }
+
+            p {
+                font-size: $s14;
+            }
         }
     }
 
@@ -66,6 +82,17 @@
         display: flex;
         gap: $s16;
         align-items: center;
+        border: 1px solid $colorPink--light;
+        border-radius: $s16;
+        padding-right: $s16;
+        
+        a {
+            padding-top: $s8;
+        }
+    }
+
+    .projectsHomeCard__button {
+        width: 100%;
     }
 }
 

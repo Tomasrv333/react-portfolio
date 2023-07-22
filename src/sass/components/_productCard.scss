@@ -25,4 +25,9 @@
     &:hover {
         background-color: $colorPink--light;
     }
+
+    @include for-phone-only {
+        background-color: $colorDark--light;
+        border: none;
+    }
 }

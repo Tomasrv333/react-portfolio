@@ -10,7 +10,8 @@
     border-radius: $s16;
 
     @include for-phone-only {
-        padding: $s32;
+        padding: 0;
+        background-color: transparent;
     }
 
     .whatIDo__cards {

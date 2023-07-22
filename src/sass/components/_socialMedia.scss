@@ -9,4 +9,8 @@
     border-radius: $s16;
     align-items: center;
     justify-content: center;
+
+    @include for-phone-only {
+        gap: $s18;
+    }
 }

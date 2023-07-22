@@ -1,4 +1,5 @@
 import ImageProfile from '../../../assets/ImageProfile.svg';
+import HomeIcon from '../../../assets/Icons/HomeIcon.svg'
 import SocialMedia from '../../../components/SocialMedia';
 import { FaCopy, FaMouse } from "react-icons/fa";
 
@@ -7,7 +8,7 @@ const HomeHero = () => {
     <div className="container">
       <div className="hero__content">
         <div className="hero__info">
-          <h1 className="hero__title">Im Tomás<span>Full Stack Developer</span></h1>
+          <h1 className="hero__title">Tomás Ríos Vargas<span>Full Stack Developer</span></h1>
           <span className="hero__span">Welcome to my portfolio...</span>
           <hr className='hero__line'></hr>
           <p className="hero__description">I will create custom web solutions for your needs. With expertise in full stack development, Ill deliver functional and visually appealing websites and applications that provide a seamless user experience.</p>
