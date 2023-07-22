@@ -5,7 +5,7 @@
 
     @include for-phone-only {
         column-gap: 0;
-        row-gap: $s24;
+        row-gap: $s96;
     }
 
     .hero__info {
@@ -14,26 +14,39 @@
         flex-direction: column;
         justify-content: space-between;
         padding: $s64;
-        gap: $s24;
+        gap: $s32;
         border-radius: $s16;
         background-color: $colorDark--light;
 
         @include for-phone-only {
-            padding: $s64 0;
+            padding: 0;
+            padding-right: $s32;
+            border-radius: 0;
             background-color: transparent;
+            border-right: 1px solid $colorPink--light;
         }
 
         .hero__span {
             @include for-phone-only {
-                text-align: center;
                 color: $colorPink;
             }
         }
 
         .hero__title {
+            display: flex;
+            flex-direction: column;
+            gap: $s8;
+
             @include for-phone-only {
-                text-align: center;
                 line-height: 2rem;
+                font-size: $s24;
+                color: $colorWhite;
+            }
+
+            span {
+                font-size: $s32;
+                padding-bottom: $s8;
+                color: $colorPink;
             }
         }
 
@@ -42,35 +55,18 @@
             border: 1px solid $colorPink--light;
 
             @include for-phone-only {
-                width: 60%;
+                display: none;
             }
         }
 
         .hero__description {
             @include for-phone-only {
-                text-align: center;
-            }
-        }
-
-        .hero__copyEmail {
-            display: flex;
-            gap: $s16;
-            align-items: center;
-            width: fit-content;
-            border: 1px solid $colorPink--light;
-            border-radius: $s16;
-            padding: $s8 $s16;
-            background-color: $colorDark--light;
-            color: $colorPink;
-
-            @include for-phone-only {
-                margin: 0 auto;
+                padding-right: $s8;
             }
         }
 
         .hero__btn {
             @include for-phone-only {
-                margin: 0 auto;
             }
         }
     }
@@ -91,8 +87,28 @@
         }
 
         @include for-phone-only {
-            gap: $s32;
-            padding: $s32;
+            gap: $s16;
+            padding-top: $s32;
+            padding-left: $s32;
+            background-color: $colorDark--light;
+        }
+
+        .hero__copyEmail {
+            display: flex;
+            gap: $s16;
+            align-items: center;
+            width: fit-content;
+            border: 1px solid $colorPink--light;
+            border-radius: $s16;
+            padding: $s8 $s16;
+            background-color: $colorDark--light;
+            color: $colorPink;
+
+            @include for-phone-only {
+                box-sizing: border-box;
+                margin: 0 auto;
+                color: $colorWhite;
+            }
         }
     }
 }
@@ -102,4 +118,8 @@
     align-items: center;
     gap: $s8;
     opacity: .7;
+
+    @include for-phone-only {
+        display: none;
+    }
 }

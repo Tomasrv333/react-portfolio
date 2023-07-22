@@ -10,15 +10,20 @@
     border-radius: $s16;
 
     @include for-phone-only {
-        gap: $s32;
-        padding: $s32;
+        padding: 0;
         background-color: $colorDark--light;
         display:flex;
         flex-direction: column;
         text-align: center;
+        border: 1px solid $colorPink--light;
+        overflow: hidden;
 
         .projectsHomeCard__info-content {
             order: 2;
+            
+            @include for-phone-only {
+                padding: $s32;
+            }
         }
     }
 }
@@ -38,7 +43,6 @@
 
     @include for-phone-only {
         box-sizing: border-box;
-        align-items: center;
     }
 
     .projectsHomeCard__description {
@@ -78,6 +82,12 @@
     &:hover {
         background-color: $colorPink--light;
     }
+
+    @include for-phone-only {
+        border: none;
+        padding: 0;
+        border-radius: 16px 16px 0px 0px;
+    }
     
     .projectsHomeCard__img {
         width: 100%;
@@ -94,6 +104,7 @@
 
         @include for-phone-only {
             height: 260px;
+            border-radius: 16px 16px 0px 0px;
         }
     }
 }

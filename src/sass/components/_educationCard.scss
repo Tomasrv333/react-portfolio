@@ -1,5 +1,5 @@
 .education-card__content {
-    height: 100%;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     background-color: $colorDark--light;

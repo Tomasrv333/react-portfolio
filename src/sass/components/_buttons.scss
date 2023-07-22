@@ -17,4 +17,9 @@ button {
     color: $colorWhite;
     border: 1px solid $colorPink;
     background-color: transparent;
+
+    @include for-phone-only {
+        border: 0;
+        background-color: $colorPink;
+    }
 }

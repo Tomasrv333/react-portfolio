@@ -13,7 +13,6 @@ const SocialMedia = () => {
         <img src={IconGithub} alt="Github"/>
         <img src={IconFacebook} alt="Facebook"/>
         <img src={IconTelegram} alt="Telegram"/>
-        <img src={IconDiscord} alt="Discord"/>
     </div>
   )
 }

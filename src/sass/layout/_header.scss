@@ -12,7 +12,7 @@ header {
         padding: $s24 $s120;
 
         @include for-phone-only {
-            padding: $s24 $s64;
+            padding: $s24 $s32;
         }
 
         @include for-tablet-portrait-up {
@@ -22,15 +22,11 @@ header {
 
     .header__title {
         color: $colorPink;
-        font-weight: $fontSemiBold;
     }
 
     .header__icon {
         display: flex;
         align-items: center;
-        padding: 4px;
-        border: 1px solid $colorPink;
-        border-radius: 6px;
         color: $colorWhite;
     }
 }

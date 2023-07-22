@@ -52,7 +52,7 @@
     padding: $s64;
 
     @include for-phone-only {
-        padding: $s16;
+        padding: $s32;
     }
 
     .form__info {

@@ -43,118 +43,120 @@ const HomeAbout = () => {
             </article>
             <article className="about__skill-content">
                 <h3>Technical Skills</h3>
-                <div className="about__skill-frame">
-                    <div className="skill__list">
-                        <TechSkill
-                            icon={PythonIcon}
-                            alt="Python"
-                            name="Python"
-                            variant="horizontal"
-                        />
-                        <TechSkill
-                            icon={JavascriptIcon}
-                            alt="Javascript"
-                            name="Javascript"
-                            variant="horizontal"
-                        />
-                        <TechSkill
-                            icon={JavaIcon}
-                            alt="Java"
-                            name="Java"
-                            variant="horizontal"
-                        />
-                        <TechSkill
-                            icon={RubyIcon}
-                            alt="Ruby"
-                            name="Ruby"
-                            variant="horizontal"
-                        />
-                        <TechSkill
-                            icon={MysqlIcon}
-                            alt="MySQL"
-                            name="MySQL"
-                            variant="horizontal"
-                        />
-                        <TechSkill
-                            icon={MongoIcon}
-                            alt="MongoDB"
-                            name="MongoDB"
-                            variant="horizontal"
-                        />
-                    </div>
-                    <div className="skill__line">
+                <div className="about__skill-group">
+                    <div className="about__skill-frame about__skill-frame--up">
+                        <div className="skill__list">
+                            <TechSkill
+                                icon={PythonIcon}
+                                alt="Python"
+                                name="Python"
+                                variant="horizontal"
+                            />
+                            <TechSkill
+                                icon={JavascriptIcon}
+                                alt="Javascript"
+                                name="Javascript"
+                                variant="horizontal"
+                            />
+                            <TechSkill
+                                icon={JavaIcon}
+                                alt="Java"
+                                name="Java"
+                                variant="horizontal"
+                            />
+                            <TechSkill
+                                icon={RubyIcon}
+                                alt="Ruby"
+                                name="Ruby"
+                                variant="horizontal"
+                            />
+                            <TechSkill
+                                icon={MysqlIcon}
+                                alt="MySQL"
+                                name="MySQL"
+                                variant="horizontal"
+                            />
+                            <TechSkill
+                                icon={MongoIcon}
+                                alt="MongoDB"
+                                name="MongoDB"
+                                variant="horizontal"
+                            />
+                        </div>
+                        <div className="skill__line">
 
+                        </div>
+                        <div className="skill__list">
+                            <TechSkill
+                                icon={DjangoIcon}
+                                alt="Django"
+                                name="Django"
+                                variant="horizontal"
+                            />
+                            <TechSkill
+                                icon={NodeIcon}
+                                alt="Node"
+                                name="Node"
+                                variant="horizontal"
+                            />
+                            <TechSkill
+                                icon={ExpressIcon}
+                                alt="Express"
+                                name="Express"
+                                variant="horizontal"
+                            />
+                            <TechSkill
+                                icon={ReactIcon}
+                                alt="React"
+                                name="React"
+                                variant="horizontal"
+                            />
+                            <TechSkill
+                                icon={AngularIcon}
+                                alt="Angular"
+                                name="Angular"
+                                variant="horizontal"
+                            />
+                            <TechSkill
+                                icon={BootstrapIcon}
+                                alt="Bootstrap"
+                                name="Bootstrap"
+                                variant="horizontal"
+                            />
+                        </div>
                     </div>
-                    <div className="skill__list">
+                    <div className="about__skill-frame about__skill-frame--down">
                         <TechSkill
-                            icon={DjangoIcon}
-                            alt="Django"
-                            name="Django"
-                            variant="horizontal"
+                            icon={FigmaIcon}
+                            alt="Figma"
+                            name="Figma"
+                            variant="vertical"
                         />
                         <TechSkill
-                            icon={NodeIcon}
-                            alt="Node"
-                            name="Node"
-                            variant="horizontal"
+                            icon={GithubIcon}
+                            alt="Github"
+                            name="Github"
+                            variant="vertical"
                         />
                         <TechSkill
-                            icon={ExpressIcon}
-                            alt="Express"
-                            name="Express"
-                            variant="horizontal"
+                            icon={OfficeIcon}
+                            alt="Office"
+                            name="Office"
+                            variant="vertical"
                         />
                         <TechSkill
-                            icon={ReactIcon}
-                            alt="React"
-                            name="React"
-                            variant="horizontal"
+                            icon={NotionIcon}
+                            alt="Notion"
+                            name="Notion"
+                            variant="vertical"
                         />
                         <TechSkill
-                            icon={AngularIcon}
-                            alt="Angular"
-                            name="Angular"
-                            variant="horizontal"
-                        />
-                        <TechSkill
-                            icon={BootstrapIcon}
-                            alt="Bootstrap"
-                            name="Bootstrap"
-                            variant="horizontal"
+                            icon={SlackIcon}
+                            alt="Slack"
+                            name="Slack"
+                            variant="vertical"
                         />
                     </div>
-                </div>
-                <div className="about__skill-frame about__skill-frame--vertical">
-                    <TechSkill
-                        icon={FigmaIcon}
-                        alt="Figma"
-                        name="Figma"
-                        variant="vertical"
-                    />
-                    <TechSkill
-                        icon={GithubIcon}
-                        alt="Github"
-                        name="Github"
-                        variant="vertical"
-                    />
-                    <TechSkill
-                        icon={OfficeIcon}
-                        alt="Office"
-                        name="Office"
-                        variant="vertical"
-                    />
-                    <TechSkill
-                        icon={NotionIcon}
-                        alt="Notion"
-                        name="Notion"
-                        variant="vertical"
-                    />
-                    <TechSkill
-                        icon={SlackIcon}
-                        alt="Slack"
-                        name="Slack"
-                        variant="vertical"
-                    />
                 </div>
             </article>
             <article className="about__education-content">

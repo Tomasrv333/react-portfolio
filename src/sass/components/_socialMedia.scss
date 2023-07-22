@@ -1,10 +1,12 @@
 .socialMedia-card__content {
     width: 100%;
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: $s24;
+    column-gap: $s32;
     padding: $s16;
-    background-color: $colorDark--light;
     border-radius: $s16;
+    align-items: center;
+    justify-content: center;
 }

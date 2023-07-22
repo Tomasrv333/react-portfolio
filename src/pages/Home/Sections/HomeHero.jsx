@@ -7,14 +7,10 @@ const HomeHero = () => {
     <div className="container">
       <div className="hero__content">
         <div className="hero__info">
+          <h1 className="hero__title">Im Tomás<span>Full Stack Developer</span></h1>
           <span className="hero__span">Welcome to my portfolio...</span>
-          <h1 className="hero__title">Im Tomás / Full Stack Developer</h1>
           <hr className='hero__line'></hr>
           <p className="hero__description">I will create custom web solutions for your needs. With expertise in full stack development, Ill deliver functional and visually appealing websites and applications that provide a seamless user experience.</p>
-          <div className='hero__copyEmail'>
-            <span>tomasrv123@gmail.com</span>
-            <FaCopy/>
-          </div>
           <button className='hero__btn button--primary'><a href="#contact">Contact me</a> </button>
         </div>
         <div className="hero__side">
@@ -23,6 +19,10 @@ const HomeHero = () => {
           </div>
           <div className="hero__media">
             <SocialMedia/>
+          </div>
+          <div className='hero__copyEmail'>
+            <span>tomasrv123@gmail.com</span>
+            <FaCopy/>
           </div>
         </div>
       </div>

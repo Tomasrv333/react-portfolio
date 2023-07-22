@@ -1,5 +1,5 @@
 #projects {
-    background-color: $colorDark;
+    background-color: $colorDark--light;
 }
 
 .projectsHomeCards__content {
@@ -10,6 +10,6 @@
     gap: $s24;
 
     @include for-phone-only {
-        gap: $s64;
+        gap: $s32;
     }
 }
