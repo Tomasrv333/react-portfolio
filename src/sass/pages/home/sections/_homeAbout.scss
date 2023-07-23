@@ -117,5 +117,6 @@
         display: grid;
         grid-template-rows: repeat(4, 1fr);
         gap: $s16;
+        height: 100%;
     }
 }

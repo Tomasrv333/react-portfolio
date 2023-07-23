@@ -41,4 +41,85 @@ header {
         align-items: center;
         color: $colorWhite;
     }
+
+    .header__nav {
+        @include for-phone-only {
+            display: none;
+        }
+
+        @include for-tablet-portrait-up {
+            display: none;
+        }
+
+        @include for-tablet-landscape-up {
+            display: block;
+        }
+
+        @include for-desktop-up {
+            display: block;
+        }
+    }
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: $colorDark;
+    width: 260px;
+    right: -260px;
+    top: 0;
+    height: 100vh;
+    transition: .5s;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar__icon-div {
+    height: fit-content;
+    padding: 29px $s64;
+    display: flex;
+    justify-content: end;
+    
+    .sidebar__icon {
+        color: $colorWhite;
+    }
+}
+
+.sidebar__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: $s16;
+    background-color: $colorDark--light;
+    gap: $s16;
+
+    .sidebar__btn {
+        width: 83%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero__copyEmail {
+        @include for-phone-only {
+            margin: 0;
+        }
+
+        @include for-tablet-portrait-up {
+            margin: 0;
+        }
+    }
+
+    .sidebar__nav {
+        @include for-tablet-landscape-up {
+            display: none;
+        }
+
+        @include for-desktop-up {
+            display: none;
+        }
+    }
 }

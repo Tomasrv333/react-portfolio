@@ -9,14 +9,14 @@ button {
     transition: ease-out .4s;
 
     &:hover, &:focus {
-        box-shadow: inset 200px 0 0 0 $colorPink;    
+        background-color: $colorPink--light;   
     }
 }
 
 .button--primary {
     color: $colorWhite;
     border: 1px solid $colorPink;
-    background-color: transparent;
+    background-color: $colorPink;
 
     @include for-phone-only {
         border: 0;

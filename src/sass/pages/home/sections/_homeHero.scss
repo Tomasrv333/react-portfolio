@@ -114,6 +114,7 @@
                     @include for-phone-only {
                         line-height: 2rem;
                         color: $colorWhite;
+                        text-align: center;
                     }
         
                     @include for-tablet-portrait-up {
@@ -164,36 +165,6 @@
 
             @include for-desktop-up {
                 text-align: start;
-            }
-        }
-
-        .hero__copyEmail {
-            display: flex;
-            gap: $s16;
-            align-items: center;
-            width: fit-content;
-            border: 1px solid $colorPink--light;
-            border-radius: $s16;
-            padding: $s8 $s16;
-            background-color: $colorDark--light;
-            color: $colorPink;
-
-            @include for-phone-only {
-                box-sizing: border-box;
-                margin: 0 auto;
-                color: $colorWhite;
-            }
-            
-            @include for-tablet-portrait-up {
-                margin: 0 auto;
-            }
-
-            @include for-tablet-landscape-up {
-                margin: 0;
-            }
-
-            @include for-desktop-up {
-                margin: 0;
             }
         }
 

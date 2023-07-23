@@ -5,13 +5,25 @@ nav {
         padding: 0;
         gap: $s64;
         margin: 0;
-    }
 
-    @include for-phone-only {
-        display: none;
-    }
+        @include for-phone-only {
+            flex-direction: column;
+            gap: $s16;
+        }
 
-    @include for-tablet-portrait-up {
-        display: none;
+        @include for-tablet-portrait-up {
+            flex-direction: column;
+            gap: $s16;
+        }
+
+        @include for-tablet-landscape-up {
+            flex-direction: row;
+            gap: $s32;
+        }
+
+        @include for-desktop-up {
+            flex-direction: row;
+            gap: $s64;
+        }
     }
 }
