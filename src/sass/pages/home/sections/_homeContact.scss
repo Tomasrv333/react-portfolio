@@ -11,12 +11,18 @@
         grid-template-columns: 1fr;
     }
 
+    @include for-tablet-portrait-up {
+    }
+
     @include for-tablet-landscape-up {
+        grid-template-columns: 1fr;
+    }
+
+    @include for-desktop-up {
         grid-template-columns: repeat(2, 1fr);
     }
 
     article {
-        width: 100%;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -28,6 +34,10 @@
 
         @include for-phone-only {
             padding: $s32;
+        }
+
+        @include for-tablet-portrait-up {
+            width: 100%;
         }
 
         h4 {
@@ -65,6 +75,11 @@
             grid-template-columns: none;
         }
 
+        @include for-tablet-portrait-up {
+            width: 100%;
+            grid-template-columns: none;
+        }
+
         label {
             color: $colorPink;
         }
@@ -79,6 +94,7 @@
             display: flex;
             flex-direction: column;
             gap: $s8;
+
         }
 
         .form__info-textarea {
@@ -103,6 +119,10 @@
         width: 100%;
     }
 
+    @include for-tablet-portrait-up {
+        width: 100%;
+    }
+
     h4 {
         color: $colorPink;
     }
@@ -114,6 +134,11 @@
         gap: $s24;
 
         @include for-phone-only {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include for-tablet-portrait-up {
             display: flex;
             flex-direction: column;
         }
@@ -135,6 +160,12 @@
             }
 
             @include for-phone-only {
+                width: 100%;
+                height: $s32;
+                padding: $s16 0;
+            }
+
+            @include for-tablet-portrait-up {
                 width: 100%;
                 height: $s32;
                 padding: $s16 0;

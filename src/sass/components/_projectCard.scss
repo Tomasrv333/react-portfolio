@@ -19,18 +19,43 @@
 
         .projectsHomeCard__info-content {
             order: 2;
-            
-            @include for-phone-only {
-                padding: $s32;
-            }
         }
+    }
+
+    @include for-tablet-portrait-up {
+        gap: $s32;
+
+        .projectsHomeCard__info-content {
+            order: 2;
+            gap: $s24;
+        }
+    }
+
+    @include for-tablet-portrait-up {
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    @include for-tablet-landscape-up {
+        display: flex;
+        flex-direction: row;
+    }
+
+    @include for-desktop-up {
+        flex-direction: row;
     }
 }
 
 .projectsHomeCard__content--secondary {
+
+    @include for-tablet-landscape-up {
+        flex-direction: row-reverse;
+    }
     
-    .projectsHomeCard__info-content {
-        order: 2;
+    @include for-desktop-up {
+        flex-direction: row-reverse;
     }
 }
 
@@ -44,6 +69,11 @@
         box-sizing: border-box;
         border: 1px solid $colorPink--light;
         border-radius: 0 0 16px 16px;
+        padding: $s32;
+    }
+
+    @include for-tablet-portrait-up {
+        padding: 0;
     }
 
     .projectsHomeCard__description {
@@ -76,6 +106,10 @@
                 font-size: $s14;
             }
         }
+
+        @include for-tablet-portrait-up {
+            justify-content: center;
+        }
     }
 
     .projectsHomeCard__link-frame {
@@ -89,10 +123,18 @@
         a {
             padding-top: $s8;
         }
+
+        @include for-tablet-portrait-up {
+            width: fit-content;
+            margin: 0 auto;
+        }
     }
 
     .projectsHomeCard__button {
-        width: 100%;
+
+        @include for-phone-only {
+            width: 100%;
+        }
     }
 }
 
