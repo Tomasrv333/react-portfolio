@@ -1,15 +1,33 @@
 import SocialMedia from "../../../components/SocialMedia"
 import ContactFigure from '../../../assets/ContactFigure.svg'
 import { useState } from "react"
+import emailjs from 'emailjs-com'
+
 const HomeContact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const formData = new FormData(e.target)
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message')
+    }
+
+    emailjs.send(
+      'service_6qweux7',
+      'template_6dzqmxn',
+      data,
+      'KybRyDhv7MVP_cH9l'
+    )
+    .then((response) => {
+      alert('Correo enviado correctamente!', response)
+    })
+    .catch((error) => {
+      alert('No se pudo enviar el correo', error)
+    })
   }
 
   return (

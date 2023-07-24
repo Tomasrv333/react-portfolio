@@ -1,7 +1,12 @@
+#hero {
+    height: fit-content;
+}
+
 .hero__content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     column-gap: $s32;
+    height: 60vh;
 
     @include for-phone-only {
         column-gap: 0;

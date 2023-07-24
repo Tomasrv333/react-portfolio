@@ -7,7 +7,7 @@ const HomeHero = () => {
 
   return (
     <div className="container">
-      <div className="hero__content">
+      <div id='hero' className="hero__content">
         <div className="hero__info">
           <div className='hero__info--up-group'>
             <img src={ImageProfile} alt="Tomás Ríos Vargas" />

@@ -33,7 +33,9 @@ const Header = () => {
           </div>
         </div>
         <div className='sidebar__content'>
-          <button className='sidebar__btn button--primary'>Download my Cv <FaDownload/></button>
+          <a href='https://drive.google.com/uc?export=download&id=1IsT9m6qa10oKEHwRn_a9FRzGdtzUWV0t'>
+            <button className='sidebar__btn button--primary'>Download my Cv <FaDownload/></button>
+          </a>
           <CopyEmail/>
           <div className='sidebar__nav'>
             <Nav/>
