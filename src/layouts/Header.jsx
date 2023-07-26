@@ -3,12 +3,19 @@ import { FaBars, FaTimes, FaDownload } from "react-icons/fa";
 import Nav from "../components/Nav";
 import { useState } from 'react';
 import CopyEmail from '../components/CopyEmail';
+import {useTranslation} from "react-i18next";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleSidebarToggle = () => {
     setIsSidebarOpen(!isSidebarOpen)
+  }
+
+  const { t, i18n } = useTranslation()
+
+  const handleLanguages = () => {
+    i18n.handleToEnglish('en')
   }
 
   return (
@@ -20,10 +27,14 @@ const Header = () => {
         <div className='header__nav'>
           <Nav/>
         </div>
-        <div>
-            <div onClick={handleSidebarToggle} className="header__icon">
-                <FaBars size="18px"/>
-            </div>
+        <div className='header__options'>
+          <select name="languages" id="select__languages">
+            <option value="English" onClick={handleLanguages}>English</option>
+            <option value="Spanish" onClick={handleLanguages}>Spanish</option>
+          </select>
+          <div onClick={handleSidebarToggle} className="header__icon">
+              <FaBars size="18px"/>
+          </div> 
         </div>
       </div>
       <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>

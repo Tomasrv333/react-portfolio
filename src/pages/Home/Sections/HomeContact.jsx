@@ -2,10 +2,10 @@ import SocialMedia from "../../../components/SocialMedia"
 import ContactFigure from '../../../assets/ContactFigure.svg'
 import { useState } from "react"
 import emailjs from 'emailjs-com'
+import { ToastContainer, toast } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 
 const HomeContact = () => {
-  
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -13,8 +13,12 @@ const HomeContact = () => {
     const data = {
       name: formData.get('name'),
       email: formData.get('email'),
-      message: formData.get('message')
+      message: formData.get('message'),
+      phone: formData.get('phone'),
+      service: formData.get('services')
     }
+
+    console.log(data)
 
     emailjs.send(
       'service_6qweux7',
@@ -23,15 +27,27 @@ const HomeContact = () => {
       'KybRyDhv7MVP_cH9l'
     )
     .then((response) => {
-      alert('Correo enviado correctamente!', response)
+      toast("✅ Mensaje enviado!", response)
     })
     .catch((error) => {
-      alert('No se pudo enviar el correo', error)
+      toast("😪 No se pudo enviar el mensaje", error)
     })
   }
 
   return (
     <section id="contact" className='container'>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={4000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <h2 className="contact__title">Contact</h2>
       <div className="contact__content">
         <article>
@@ -68,18 +84,12 @@ const HomeContact = () => {
           <div className="form__services-content">
             <h4>Services</h4>
             <div className="form__services-frame">
-              <div>
-                <input type="radio" name="services" id="web-design"/>
-                <label htmlFor="web-design">Web Design</label>
-              </div>
-              <div>
-                <input type="radio" name="services" id="web-app"/>
-                <label htmlFor="web-app">Web Application</label>
-              </div>
-              <div>
-                <input type="radio" name="services" id="other"/>
+                <input type="radio" name="services" id="web-design" value="Web design and development"/>
+                <label htmlFor="web-design">Web design and development</label>
+                <input type="radio" name="services" id="web-app" value="Job Opportunity"/>
+                <label htmlFor="web-app">Job Opportunity</label>
+                <input type="radio" name="services" id="other" value="Other"/>
                 <label htmlFor="other">Other</label>
-              </div>
             </div>
           </div>
           <button type="submit" className="button--primary">

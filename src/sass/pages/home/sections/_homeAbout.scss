@@ -72,6 +72,10 @@
             padding: $s24;
             padding-bottom: 29px;
             border-radius: $s16;
+
+            @include for-phone-only {
+                gap: 4%;
+            }
         }
 
         .about__skill-frame--up {
@@ -95,6 +99,10 @@
             width: 2px;
             height: 100%;
             background-color: $colorPink--light;
+            
+            @include for-phone-only {
+                display: none;
+            }
 
             @include for-tablet-landscape-up {
                 display: none;

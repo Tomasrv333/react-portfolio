@@ -6,7 +6,7 @@ const ProjectCard = (props) => {
       <div className="projectsHomeCard__info-content">
       <div className="projectsHomeCard__title-frame">
           <h4>{props.title}</h4>
-          <p>/</p>
+          <span>/</span>
           <p>{props.category}</p>
         </div>
         <p className='projectsHomeCard__description'>{props.description}</p>

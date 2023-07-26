@@ -1,20 +1,18 @@
 .projectsHomeCard__content {
-    width: 100%;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 4%;
-    align-items: center;
-    background-color: $colorDark--light;
+    height: fit-content;
+    display: flex;
     padding: $s64;
+    align-items: center;
     border-radius: $s16;
+    gap: $s16;
 
     @include for-phone-only {
+        width: 100%;
         padding: 0;
+        gap: 0;
         background-color: $colorWhite--light;
         display:flex;
         flex-direction: column;
-        text-align: center;
         overflow: hidden;
 
         .projectsHomeCard__info-content {
@@ -23,28 +21,27 @@
     }
 
     @include for-tablet-portrait-up {
-        gap: $s32;
-
-        .projectsHomeCard__info-content {
-            order: 2;
-            gap: $s24;
-        }
-    }
-
-    @include for-tablet-portrait-up {
-        display:flex;
+        padding: 0;
+        text-align: center;
+        display: flex;
         flex-direction: column;
-        text-align: center;
-        overflow: hidden;
+        gap: 0;
+
+        .projectsHomeCard__info-content {
+            order: 2;
+        }
     }
 
     @include for-tablet-landscape-up {
         display: flex;
         flex-direction: row;
+        background-color: $colorDark--light;
+        gap: $s16;
     }
 
     @include for-desktop-up {
         flex-direction: row;
+        padding: $s64;
     }
 }
 
@@ -52,16 +49,27 @@
 
     @include for-tablet-landscape-up {
         flex-direction: row-reverse;
+
+        .projectsHomeCard__img-content {
+            border-left: none;
+            border-right: $s8 solid $colorPink;
+        }
     }
     
     @include for-desktop-up {
         flex-direction: row-reverse;
+
+        .projectsHomeCard__img-content {
+            border-left: none;
+            border-right: $s8 solid $colorPink;
+        }
     }
 }
 
 .projectsHomeCard__info-content {
     width: 100%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: $s24;
 
@@ -78,19 +86,42 @@
     }
 
     @include for-tablet-portrait-up {
+        box-sizing: border-box;
+        border: 1px solid $colorPink--light;
+        border-radius: 0 0 16px 16px;
+        padding: $s32;
+        gap: $s16;
+    }
+
+    @include for-tablet-landscape-up {
+        border: none;
         padding: 0;
+        text-align: center;
+    }
+
+    @include for-desktop-up {
+        text-align: center;
     }
 
     .projectsHomeCard__description {
         font-size: $s18;
+        padding: 0;
 
         @include for-phone-only {
             display: none;
+
+            span {
+                text-align: start;
+            }
         }
     }
 
     .projectsHomeCard__tech {
         color: $colorPink;
+
+        @include for-phone-only {
+            display: none;
+        }
     }
 
     .projectsHomeCard__title-frame {
@@ -125,6 +156,7 @@
         display: flex;
         gap: $s16;
         align-items: center;
+        background-color: $colorPink--light;
         border: 1px solid $colorPink--light;
         border-radius: $s16;
         padding-right: $s16;
@@ -149,14 +181,14 @@
 
 .projectsHomeCard__img-content {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
+    min-height: 320px;
     box-sizing: border-box;
-    border: 1px solid $colorPink;
-    padding: $s8;
     border-radius: $s16;
+    border-bottom: $s8 solid $colorPink;
+    background-color: $colorPink;
     overflow: hidden;
     transition: .4s;
-    background-color: $colorPink--light;
 
     &:hover {
         background-color: $colorPink;
@@ -167,11 +199,25 @@
         padding: 0;
         border-radius: 16px 16px 0px 0px;
     }
+
+    @include for-tablet-portrait-up {
+        border-left: 0;
+        border-radius: $s16 $s16 0 0;
+    }
+
+    @include for-tablet-landscape-up {
+        border-radius: $s16;
+        border-left: $s8 solid $colorPink;
+    }
+
+    @include for-desktop-up {
+        min-width: 400px;
+    }
     
     .projectsHomeCard__img {
         width: 100%;
         height: 100%;
-        border-radius: $s16;
+        border-radius: $s16 0 0 $s16 ;
         background-position: top;
         background-repeat: no-repeat;
         background-size: cover;
@@ -184,6 +230,10 @@
         @include for-phone-only {
             height: 100%;
             border-radius: 16px 16px 0px 0px;
+        }
+
+        @include for-tablet-portrait-up {
+            border-radius: $s16 $s16 0 0;
         }
     }
 }

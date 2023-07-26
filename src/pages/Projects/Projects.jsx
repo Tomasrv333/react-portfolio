@@ -1,6 +1,6 @@
 import { FaArrowLeft } from "react-icons/fa"
 import ProjectListCard from "../../components/projectsContent/ProjectListCard"
-import ProjectImg from "../../assets/ProjectImg.svg"
+import ScreenshotDashboard from "../../assets/projects/screenshot-reactDashboard.jpg"
 
 const Projects = () => {
   return (
@@ -22,28 +22,10 @@ const Projects = () => {
       </div>
       <section className="projects__content">
         <ProjectListCard
-          img={ProjectImg}
+          img={ScreenshotDashboard}
           alt=""
           title="Task Management"
           category="Web Application"          
-        />
-        <ProjectListCard
-          img={ProjectImg}
-          alt=""
-          title="Task Management"
-          category="Web Application"          
-        />
-        <ProjectListCard
-          img={ProjectImg}
-          alt=""
-          title="Task Management"
-          category="Web Application"  
-        />
-        <ProjectListCard
-          img={ProjectImg}
-          alt=""
-          title="Task Management"
-          category="Web Application"  
         />
       </section>
     </div>

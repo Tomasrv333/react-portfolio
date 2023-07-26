@@ -9,6 +9,8 @@
     border-radius: $s16;
     align-items: center;
     justify-content: center;
+    background-color: $colorDark--light;
+    border: 1px solid $colorPink--light;
 
     @include for-phone-only {
         gap: $s18;
