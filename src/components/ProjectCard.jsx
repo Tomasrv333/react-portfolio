@@ -1,6 +1,9 @@
 import { FaGithub, FaFigma } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 
 const ProjectCard = (props) => {
+  const {t} = useTranslation();
+
   return (
     <article className={`projectsHomeCard__content projectsHomeCard__content--${props.variant === 'secondary' ? 'secondary' : 'primary'}`}>
       <div className="projectsHomeCard__info-content">
@@ -10,10 +13,10 @@ const ProjectCard = (props) => {
           <p>{props.category}</p>
         </div>
         <p className='projectsHomeCard__description'>{props.description}</p>
-        <p className='projectsHomeCard__tech'>Technologies:</p>
+        <p className='projectsHomeCard__tech'>{t('projects.card.tech')}:</p>
         <span>{props.tech}</span>
         <div className="projectsHomeCard__link-frame">
-          <button className="projectsHomeCard__button button--primary">Try Now</button>
+          <button className="projectsHomeCard__button button--primary">{t('projects.card.btn')}</button>
           <a target='_blank' href={props.repository}><FaGithub size={24} /></a>
           <a target='_blank' href={props.figma}><FaFigma size={24} /></a>
         </div>

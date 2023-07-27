@@ -18,6 +18,34 @@ header {
         @include for-tablet-portrait-up {
             padding: $s24 $s64;
         }
+
+        select {
+            cursor: pointer;
+            color: $colorPink;
+            border: 1px solid $colorPink;
+            border-radius: $s16;
+            padding: 0 $s16;
+            background-color: transparent; 
+
+            &:hover {
+                color: $colorWhite;
+                background-color: $colorPink--light;
+                transition: .3s;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            option {
+                color: $colorWhite;
+                background-color: $colorDark;
+
+                &:hover {
+                    background-color: $colorPink--light;
+                }
+            }
+        }
     }
 
     .header__title {

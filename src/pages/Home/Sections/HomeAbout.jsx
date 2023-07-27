@@ -18,31 +18,34 @@ import FigmaIcon from '/src/assets/Icons/languages/Figma.svg'
 import SlackIcon from '/src/assets/Icons/languages/Slack.svg'
 import NotionIcon from '/src/assets/Icons/languages/Notion.svg'
 import OfficeIcon from '/src/assets/Icons/languages/Office.svg'
+import { useTranslation } from "react-i18next"
 
 const HomeAbout = () => {
+    const {t} = useTranslation()
+
   return (
     <section id="about" className="container">
-        <h2 className="about__title">About</h2>
+        <h2 className="about__title">{t('about.title')}</h2>
         <div className="about__content">  
             <article className="focus__content">
-                <h3>Work Focus</h3>
+                <h3>{t('about.column1.title')}</h3>
                 <div className="focus__frame">
                     <div className="focus__frame-top">
-                        <p>“I always want to offer the best quality with my work and projects”</p>
+                        <p>{t('about.column1.description')}</p>
                     </div>
                     <div className="focus__frame-list">
-                        <FocusCheck description="Understand the project requirements."/>
-                        <FocusCheck description="Establish effective communication."/>
-                        <FocusCheck description="Plan and organize work."/>
-                        <FocusCheck description="Develop in iterative stages."/>
-                        <FocusCheck description="Maintain a clean and documented code."/>
-                        <FocusCheck description="Extensive testing."/>
-                        <FocusCheck description="Provide support and follow-up."/>
+                        <FocusCheck description={t('about.column1.list.listItem1')}/>
+                        <FocusCheck description={t('about.column1.list.listItem2')}/>
+                        <FocusCheck description={t('about.column1.list.listItem3')}/>
+                        <FocusCheck description={t('about.column1.list.listItem4')}/>
+                        <FocusCheck description={t('about.column1.list.listItem5')}/>
+                        <FocusCheck description={t('about.column1.list.listItem6')}/>
+                        <FocusCheck description={t('about.column1.list.listItem7')}/>
                     </div>
                 </div>
             </article>
             <article className="about__skill-content">
-                <h3>Technical Skills</h3>
+                <h3>{t('about.column2.title')}</h3>
                 <div className="about__skill-group">
                     <div className="about__skill-frame about__skill-frame--up">
                         <div className="skill__list">
@@ -160,27 +163,27 @@ const HomeAbout = () => {
                 </div>
             </article>
             <article className="about__education-content">
-                <h3>Education</h3>
+                <h3>{t('about.column3.title')}</h3>
                 <div className="about__education-cards">
                     <EducationCard
-                        title="Systems Engineer "
-                        info="Fundación Universitaria Luis Amigo / 2020"
-                        status="In progress"
+                        title={t('about.column3.card1.title')}
+                        info={t('about.column3.card1.entity')}
+                        status={t('about.column3.status.inProgress')}
                     />
                     <EducationCard
-                        title="Full Stack Development"
+                        title={t('about.column3.card2')}
                         info="DevF / 2022"
-                        status="Completed"
+                        status={t('about.column3.status.completed')}
                     />
                     <EducationCard
-                        title="Soft Skills for the 21st Century"
+                        title={t('about.column3.card3')}
                         info="ProTalento / 2022"
-                        status="Completed"
+                        status={t('about.column3.status.completed')}
                     />
                     <EducationCard
-                        title="Tech English"
+                        title={t('about.column3.card4')}
                         info="English4"
-                        status="Completed"
+                        status={t('about.column3.status.completed')}
                     />
                 </div>
             </article>
